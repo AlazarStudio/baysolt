@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./Header.module.css";
 
+import baysolt_img from "/baysolt.png"
+
 function Header({ children, ...props }) {
   return (
     <>
       <header>
         <section className={classes.headerSection}>
           <div className={classes.headerImg}>
-            <img src="public/baysolt.png" alt="" />
+            <img src={`${baysolt_img}`} alt="" />
           </div>
           <Link to="/">Главная</Link>
           <Link to="/production">Продукция</Link>

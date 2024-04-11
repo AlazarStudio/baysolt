@@ -24,6 +24,7 @@ function App() {
           <Route index element={<DocumentsPage />} />
           <Route index element={<ContactPage />} />
           <Route index element={<FeedbackPage />} />
+          
           <Route path="*" element={<NonFoundPage />} />
         </Route>
       </Routes>
