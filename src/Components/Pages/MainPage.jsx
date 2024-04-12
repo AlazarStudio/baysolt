@@ -1,6 +1,7 @@
 import React from "react";
 
-import SectionMain from "../Standart/SectionMain/SectionMain";
+import SectionMain from "../Sections/SectionMain/SectionMain";
+import SectionCategory from "../Sections/SectionCategory/SectionCategory";
 import Button from "../Standart/Button/Button"
 
 // import img_bg from "/background_main.png";
@@ -10,7 +11,7 @@ function MainPage({ children, ...props }) {
     return (
         <>
             <SectionMain img={img}  />
-            
+            <SectionCategory />
         </>
     );
 }

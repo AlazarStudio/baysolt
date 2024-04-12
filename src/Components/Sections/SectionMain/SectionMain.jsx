@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from './SectionMain.module.css';
-import Button from "../Button/Button"
+import Button from "../../Standart/Button/Button"
 
 function SectionMain({ children, ...props }) {
     return (
@@ -9,7 +9,7 @@ function SectionMain({ children, ...props }) {
             <section className={classes.SectionMain} style={{ backgroundImage: `url('/${props.img}')` }}>
                 <div className={classes.mainBlock}>
                     <p className={classes.mainText}>TITANIT</p>
-                    <Button img={props.img}>Подробнее</Button>
+                    <Button>Подробнее</Button>
                 </div>
             </section>
         </>

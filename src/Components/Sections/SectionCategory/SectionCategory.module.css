@@ -1,0 +1,13 @@
+.categorySection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.categoryBlock {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--width-block);
+  gap: 20px;
+}
