@@ -12,6 +12,7 @@ a {
 
 :root {
     --blockWidth: 1300px;
+    --width-block: 1170px;
 }
 
 body {
@@ -25,21 +26,4 @@ main {
     padding-bottom: 80px;
 }
 
-.SectionMain {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 690px;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.mainBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    width: 1176px;
-}
 

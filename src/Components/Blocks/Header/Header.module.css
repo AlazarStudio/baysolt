@@ -7,7 +7,7 @@ header {
     color: #fff;
 }
 
-a {
+.headerLink {
     color: #fff;
 }
 
@@ -16,6 +16,7 @@ a {
     align-items: center;
     justify-content: center;
     gap: 55px;
+    width: 100%;
 }
 
 .headerImg {

@@ -9,15 +9,16 @@ function Header({ children, ...props }) {
     <>
       <header>
         <section className={classes.headerSection}>
-          <div className={classes.headerImg}>
+          <Link to="/" className={classes.headerImg}>
             <img src={`${baysolt_img}`} alt="" />
-          </div>
-          <Link to="/">Главная</Link>
-          <Link to="/production">Продукция</Link>
-          <Link to="/about">Компания</Link>
-          <Link to="/contact">Контакты</Link>
-          <Link to="/feedback">Обратная связь</Link>
-          <Link className={classes.linkTel} to="tel:+79283073000">8 (928) 307-30-00</Link>
+          </Link>
+          <Link className={classes.headerLink} to="/">Главная</Link>
+          <Link className={classes.headerLink} to="/production">Продукция</Link>
+          <Link className={classes.headerLink} to="/about">Компания</Link>
+          <Link className={classes.headerLink} to="/contact">Контакты</Link>
+          <Link className={classes.headerLink} to="/feedback">Обратная связь</Link>
+          <Link className={`${classes.headerLink} ${classes.linkTel}`} to="tel:+79283073000">8 (928) 307-30-00</Link>
+          
         </section>
       </header>
     </>

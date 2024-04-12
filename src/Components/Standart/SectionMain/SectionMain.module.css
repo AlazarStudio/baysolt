@@ -1,0 +1,25 @@
+.SectionMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 690px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width: var(--width-block);
+}
+
+.mainText {
+    font-family: Montserrat;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 97.52px;
+    color: #fff;
+}
