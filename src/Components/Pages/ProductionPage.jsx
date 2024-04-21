@@ -1,9 +1,10 @@
 import React from "react";
+import SectionProduction from "../Sections/SectionProduction/SectionProduction";
 
 function ProductionPage({ children, ...props }) {
     return ( 
         <>
-            Main
+            <SectionProduction/>
         </>
      );
 }

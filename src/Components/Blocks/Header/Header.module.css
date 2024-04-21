@@ -5,6 +5,7 @@ header {
     background: #0A1F3A;
     height: 80px;
     color: #fff;
+    width: 100%;
 }
 
 .headerLink {
@@ -14,9 +15,9 @@ header {
 .headerSection {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 55px;
-    width: 100%;
+    width: var(--width-block);
 }
 
 .headerImg {

@@ -18,12 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
-          <Route index element={<ProductionPage />} />
-          <Route index element={<ProductPage />} />
-          <Route index element={<AboutPage />} />
-          <Route index element={<DocumentsPage />} />
-          <Route index element={<ContactPage />} />
-          <Route index element={<FeedbackPage />} />
+          <Route path="/production" element={<ProductionPage />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/documents" element={<DocumentsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/feedback" element={<FeedbackPage />} />
           
           <Route path="*" element={<NonFoundPage />} />
         </Route>

@@ -9,5 +9,6 @@
   display: flex;
   flex-wrap: wrap;
   width: var(--width-block);
-  gap: 20px;
+  gap: 34px;
+  justify-content: space-between;
 }
