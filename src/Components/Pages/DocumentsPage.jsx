@@ -3,7 +3,7 @@ import React from "react";
 function DocumentsPage({ children, ...props }) {
     return ( 
         <>
-            Main
+            Документы
         </>
      );
 }
