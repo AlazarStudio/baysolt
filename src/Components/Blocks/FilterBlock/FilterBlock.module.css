@@ -5,24 +5,33 @@
     margin-top: 80px;
 }
 
-.filter select{
+.filter select {
     width: 20%;
     border: 1px solid #8C8C8C;
     border-radius: 30px;
-    padding: 15px;
+    padding: 15px 25px;
     cursor: pointer;
     font-family: Montserrat;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     outline: none;
+    background: #FFFFFF1A;
+    border: none;
+    color: var(--color-white);
 }
 
-.filter input{
+.filter input {
     width: 80%;
     outline: none;
     border-radius: 50px;
     border: none;
-    padding: 0 20px;
+    padding: 15px 25px;
     font-size: 16px;
+    background: #FFFFFF1A;
+    color: var(--color-white);
+}
+
+.filter input::placeholder{
+    color: #fff;
 }
