@@ -1,28 +1,38 @@
-import React from "react";
-import classes from './SectionProduction.module.css';
-
+import React, { useState } from "react";
 import CenterBlock from "../../Standart/CenterBlock/CenterBlock";
 import WidthBlock from "../../Standart/WidthBlock/WidthBlock";
 import ProductBlock from "../../Blocks/ProductBlock/ProductBlock";
+import FilterBlock from "../../Blocks/FilterBlock/FilterBlock";
+import classes from './SectionProduction.module.css';
 
-function SectionProduction({ children, ...props }) {
+function SectionProduction({ productData }) {
+    const [filteredObjects, setFilteredObjects] = useState(productData);
+
+    const updateFilteredObjects = (category, search) => {
+        let filtered = productData;
+        if (category && category !== "Все категории") {
+            filtered = filtered.filter(item => item.category === category);
+        }
+        if (search) {
+            filtered = filtered.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
+        }
+        setFilteredObjects(filtered);
+    };
+
     return (
         <>
             <CenterBlock>
                 <WidthBlock>
-                    <div className="filter"></div>
-
+                    <FilterBlock updateFilteredObjects={updateFilteredObjects}/>
                     <div className={classes.productions}>
-                        {
-                            props.productData.map((item, index) => (
-                                <ProductBlock 
-                                    key={index}
-                                    img={item.img}
-                                    title={item.title}
-                                    linkTitle={item.linkTitle}
-                                />
-                            ))
-                        }
+                        {filteredObjects.map((item, index) => (
+                            <ProductBlock 
+                                key={index}
+                                img={item.img}
+                                title={item.title}
+                                linkTitle={item.linkTitle}
+                            />
+                        ))}
                     </div>
                 </WidthBlock>
             </CenterBlock>
