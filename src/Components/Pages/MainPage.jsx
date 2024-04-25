@@ -13,6 +13,7 @@ import Benefit from "../Blocks/Benefit/Benefit";
 import Request from "../Blocks/Request/Request";
 import Provider from "../Blocks/Provider/Provider";
 import Sertificate from "../Blocks/Sertificate/Sertificate";
+import FAQ from "../Blocks/FAQ/FAQ";
 
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
@@ -85,6 +86,16 @@ function MainPage({ children, ...props }) {
         <WidthBlock>
           <Sertificate />
         </WidthBlock>
+
+        <FAQ />
+
+        <WidthBlock>
+          <H2 font-size={"32px"} color={"#fff"}>
+            Где купить
+          </H2>
+        </WidthBlock>
+
+        
       </ColumnBlock>
     </>
   );

@@ -1,0 +1,33 @@
+.faq {
+    width: 100%;
+    background-color: var(--color-perlblue);
+    padding: 90px;
+    color: var(--color-white);
+}
+
+.accordion_data {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion_data__desc {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.accordion_data__desc___title {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.accordion_data__desc___text {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
