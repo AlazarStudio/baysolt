@@ -5,6 +5,7 @@ import SectionCategory from "../Sections/SectionCategory/SectionCategory";
 
 import ColumnBlock from "../Standart/ColumnBlock/ColumnBlock";
 import H2 from "../Standart/H2/H2";
+import Text from "../Standart/Text/Text";
 import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
@@ -75,11 +76,26 @@ function MainPage({ children, ...props }) {
         </WidthBlock>
 
         <WidthBlock>
-          <Request/>
+          <Request />
         </WidthBlock>
 
-        <Provider/>
+        <Provider />
 
+        <WidthBlock>
+          <H2 font-size={"32px"} color={"#fff"}>
+            СЕРТИФИКАТЫ НА СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ
+            <Text
+              width={"100%"}
+              text_align={"left"}
+              font_size={"16px"}
+              margin={"35px 0"}
+            >
+              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto
+            </Text>
+          </H2>
+        </WidthBlock>
       </ColumnBlock>
     </>
   );
