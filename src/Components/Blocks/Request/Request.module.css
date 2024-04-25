@@ -1,0 +1,26 @@
+.request {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    padding: 80px;
+    background-color: var(--color-perlblue);
+    border-radius: 10px;
+}
+
+.request_title {
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29.26px;
+    color: var(--color-white);
+}
+
+.request_desc {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-white);
+    width: 45%;
+}

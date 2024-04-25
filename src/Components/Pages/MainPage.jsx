@@ -9,11 +9,11 @@ import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
 import Benefit from "../Blocks/Benefit/Benefit";
-
-// import img_bg from "/background_main.png";
+import Request from "../Blocks/Request/Request";
 
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
+
   let productData = [
     {
       img: "pr1.png",
@@ -34,6 +34,7 @@ function MainPage({ children, ...props }) {
       category: "Наливные полы",
     },
   ];
+
   return (
     <>
       <ColumnBlock gap={"80px"} alignItems={"center"}>
@@ -67,9 +68,13 @@ function MainPage({ children, ...props }) {
         </WidthBlock>
 
         <WidthBlock>
-          <RowBlock justifyContent={"space-between"} gap={'35px'}>
+          <RowBlock justifyContent={"space-between"} gap={"35px"}>
             <Benefit />
           </RowBlock>
+        </WidthBlock>
+
+        <WidthBlock>
+          <Request/>
         </WidthBlock>
       </ColumnBlock>
     </>
