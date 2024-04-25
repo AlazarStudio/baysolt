@@ -10,6 +10,7 @@ import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
 import Benefit from "../Blocks/Benefit/Benefit";
 import Request from "../Blocks/Request/Request";
+import Provider from "../Blocks/Provider/Provider";
 
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
@@ -76,6 +77,9 @@ function MainPage({ children, ...props }) {
         <WidthBlock>
           <Request/>
         </WidthBlock>
+
+        <Provider/>
+
       </ColumnBlock>
     </>
   );
