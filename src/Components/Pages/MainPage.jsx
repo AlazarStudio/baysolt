@@ -12,6 +12,7 @@ import WidthBlock from "../Standart/WidthBlock/WidthBlock";
 import Benefit from "../Blocks/Benefit/Benefit";
 import Request from "../Blocks/Request/Request";
 import Provider from "../Blocks/Provider/Provider";
+import Sertificate from "../Blocks/Sertificate/Sertificate";
 
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
@@ -82,19 +83,7 @@ function MainPage({ children, ...props }) {
         <Provider />
 
         <WidthBlock>
-          <H2 font-size={"32px"} color={"#fff"}>
-            СЕРТИФИКАТЫ НА СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ
-            <Text
-              width={"100%"}
-              text_align={"left"}
-              font_size={"16px"}
-              margin={"35px 0"}
-            >
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto
-            </Text>
-          </H2>
+          <Sertificate />
         </WidthBlock>
       </ColumnBlock>
     </>
