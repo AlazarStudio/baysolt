@@ -14,6 +14,8 @@ import Request from "../Blocks/Request/Request";
 import Provider from "../Blocks/Provider/Provider";
 import Sertificate from "../Blocks/Sertificate/Sertificate";
 import FAQ from "../Blocks/FAQ/FAQ";
+import BuyPlace from "../Blocks/BuyPlace/BuyPlace";
+import Partner from "../Blocks/Partner/Partner";
 
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
@@ -95,7 +97,31 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        
+        <WidthBlock>
+          <ColumnBlock gap={"15px"}>
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+            <BuyPlace />
+          </ColumnBlock>
+        </WidthBlock>
+
+        <WidthBlock>
+          <H2 font-size={"32px"} color={"#fff"}>
+            Наши партнеры
+          </H2>
+        </WidthBlock>
+
+        <WidthBlock>
+          <RowBlock justifyContent={"space-between"} gap={"35px"}>
+            <Partner/>
+          </RowBlock>
+        </WidthBlock>
       </ColumnBlock>
     </>
   );
