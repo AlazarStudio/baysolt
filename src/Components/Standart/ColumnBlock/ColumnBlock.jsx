@@ -13,6 +13,7 @@ function ColumnBlock({ children, ...props }) {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 justifyContent: props.justifyContent,
+                alignItems: props.alignItems,
                 borderRadius: props.borderRadius
             }}>
                 {children}
