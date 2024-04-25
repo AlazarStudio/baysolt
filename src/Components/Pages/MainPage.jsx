@@ -8,6 +8,7 @@ import H2 from "../Standart/H2/H2";
 import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
+import Benefit from "../Blocks/Benefit/Benefit";
 
 // import img_bg from "/background_main.png";
 
@@ -65,7 +66,11 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        
+        <WidthBlock>
+          <RowBlock justifyContent={"space-between"} gap={'35px'}>
+            <Benefit />
+          </RowBlock>
+        </WidthBlock>
       </ColumnBlock>
     </>
   );
