@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import getDataFromDB from "./getDataFromDB";
 
-function GetData({ tableName, children }) {
+function GetDataItem({ tableName, id, children }) {
     const [data, setData] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const dataArray = await getDataFromDB(tableName);
+                const dataArray = await getDataFromDB(tableName, id);
                 setData(dataArray);
             } catch (error) {
                 setError(error);
@@ -25,4 +25,4 @@ function GetData({ tableName, children }) {
     return children(data);
 }
 
-export default GetData;
+export default GetDataItem;

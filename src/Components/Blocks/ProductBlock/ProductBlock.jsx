@@ -7,7 +7,7 @@ function ProductBlock({ children, ...props }) {
         <>
             <div className={classes.productions_item}>
                 <div className={classes.productions_item__img}>
-                    <img src={`/${props.img}`} alt="" />
+                    <img src={`/admin/img/${props.img}`} alt="" />
                 </div>
                 <div className={classes.productions_item__title}>{props.title}</div>
                 <Link to={`/production/${props.linkTitle}`} className={classes.productions_item__btn}>

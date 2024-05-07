@@ -48,7 +48,7 @@ function MainPage({ children, ...props }) {
       <ColumnBlock gap={"80px"} alignItems={"center"}>
         <SectionMain img={img} />
 
-        <GetData tableName="item" />
+        {/* <GetData tableName="item" /> */}
         
         <SectionCategory />
 
