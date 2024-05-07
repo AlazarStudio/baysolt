@@ -17,6 +17,8 @@ import FAQ from "../Blocks/FAQ/FAQ";
 import BuyPlace from "../Blocks/BuyPlace/BuyPlace";
 import Partner from "../Blocks/Partner/Partner";
 
+import GetData from "../GetData/GetData";
+
 function MainPage({ children, ...props }) {
   let img = "background_main.png";
 
@@ -46,6 +48,8 @@ function MainPage({ children, ...props }) {
       <ColumnBlock gap={"80px"} alignItems={"center"}>
         <SectionMain img={img} />
 
+        <GetData tableName="item" />
+        
         <SectionCategory />
 
         <WidthBlock>
