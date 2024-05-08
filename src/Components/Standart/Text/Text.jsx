@@ -4,7 +4,8 @@ import classes from './Text.module.css';
 function Text({ children, ...props }) {
     return (
         <>
-            <div className={classes.Text} style={{
+            {/* <div className={classes.Text} style={{ */}
+            <div style={{
                 fontFamily: props.font_family,
                 fontSize: props.font_size,
                 fontWeight: props.font_weight,
