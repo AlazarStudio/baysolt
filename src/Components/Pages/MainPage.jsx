@@ -9,6 +9,7 @@ import Text from "../Standart/Text/Text";
 import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
+import CenterBlock from "../Standart/CenterBlock/CenterBlock";
 import Benefit from "../Blocks/Benefit/Benefit";
 import Request from "../Blocks/Request/Request";
 import Provider from "../Blocks/Provider/Provider";
@@ -49,7 +50,7 @@ function MainPage({ children, ...props }) {
         <SectionMain img={img} />
 
         {/* <GetData tableName="item" /> */}
-        
+
         <SectionCategory />
 
         <WidthBlock>
@@ -58,18 +59,26 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        <WidthBlock>
-          <RowBlock justifyContent={"space-between"}>
-            {productData.map((item, index) => (
-              <ProductBlock
-                key={index}
-                img={item.img}
-                title={item.title}
-                linkTitle={item.linkTitle}
-              />
-            ))}
-          </RowBlock>
-        </WidthBlock>
+        <GetData tableName="item">
+          {(data) =>
+            <CenterBlock gap={"40px"} margin={"60px 0 40px 0"}>
+              <WidthBlock gap={"40px"}>
+                
+                <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }} >
+                  {data.slice(0, 6).map((item, index) => (
+                    <ProductBlock style={{ borderRadius: "10px" }}
+                      key={index}
+                      img={item.img}
+                      title={item.title}
+                      linkTitle={item.id}
+                    />
+                  ))}
+                </div>
+              </WidthBlock>
+            </CenterBlock>
+          }
+        </GetData>
+
 
         <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
@@ -123,7 +132,7 @@ function MainPage({ children, ...props }) {
 
         <WidthBlock>
           <RowBlock justifyContent={"space-between"} gap={"35px"}>
-            <Partner/>
+            <Partner />
           </RowBlock>
         </WidthBlock>
       </ColumnBlock>
