@@ -5,6 +5,8 @@ import CenterBlock from "../../Standart/CenterBlock/CenterBlock";
 import H2 from "../../Standart/H2/H2";
 import Accordion from "../Accordion/Accordion";
 
+import GetData from "../../GetData/GetData";
+
 function FAQ({ children, ...props }) {
   return (
     <>
@@ -15,57 +17,33 @@ function FAQ({ children, ...props }) {
               Часто задаваемые вопросы
             </H2>
 
-            <div className={classes.accordion_data}>
-              <Accordion title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ">
-                <div className={classes.accordion_data__desc}>
-                  <div className={classes.accordion_data__desc___title}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem
-                  </div>
+            <GetData tableName="faq">
+              {(data) =>
+                <div className={classes.accordion_data}>
+                  {data.map((item) =>
+                  (
+                    <Accordion title={item.title}>
+                      <div className={classes.accordion_data__desc}>
+                        {/* <div className={classes.accordion_data__desc___title}>
+                          {item.title}
+                        </div> */}
 
-                  <div className={classes.accordion_data__desc___text}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa
-                  </div>
+                        <div className={classes.accordion_data__desc___text} dangerouslySetInnerHTML={{ __html: item.text }}>
+                          {/* {item.text} */}
+                        </div>
+                      </div>
+                    </Accordion>
+                  ))}
                 </div>
-              </Accordion>
+              }
+            </GetData>
 
-              <Accordion title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ">
-                <div className={classes.accordion_data__desc}>
-                  <div className={classes.accordion_data__desc___title}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem
-                  </div>
-
-                  <div className={classes.accordion_data__desc___text}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa
-                  </div>
-                </div>
-              </Accordion>
-              
-              <Accordion title="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa ">
-                <div className={classes.accordion_data__desc}>
-                  <div className={classes.accordion_data__desc___title}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem
-                  </div>
-
-                  <div className={classes.accordion_data__desc___text}>
-                    "Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa
-                  </div>
-                </div>
-              </Accordion>
-            </div>
           </WidthBlock>
         </CenterBlock>
-      </div>
+      </div >
     </>
   );
 }
 
 export default FAQ;
+

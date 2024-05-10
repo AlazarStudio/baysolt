@@ -3,6 +3,8 @@ import classes from "./Sertificate.module.css";
 import H2 from "../../Standart/H2/H2";
 import Text from "../../Standart/Text/Text";
 
+import GetData from "../../GetData/GetData";
+
 function Sertificate({ children, ...props }) {
   return (
     <>
@@ -15,11 +17,19 @@ function Sertificate({ children, ...props }) {
           Мы заботимся о соответствии стандартам качества, чтобы представлять нашим клиентам качественное обслуживание
         </Text>
 
-        <div className={classes.sertificate_items}>
-          <div className={classes.sertificate_items__item}></div>
-          <div className={classes.sertificate_items__item}></div>
-          <div className={classes.sertificate_items__item}></div>
-        </div>
+        <GetData tableName="certificate">
+          {(data) =>
+            <div className={classes.sertificate_items}>
+              {data.slice(0, 3).map((item) =>
+              (
+                <div className={classes.sertificate_items__item}>
+                  <img src={`admin/img/${item.img}`} alt="" srcset="" />
+                </div>
+              ))}
+            </div>
+          }
+        </GetData>
+
       </div>
     </>
   );

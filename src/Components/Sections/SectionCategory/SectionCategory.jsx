@@ -8,7 +8,7 @@ function SectionCategory({ children, ...props }) {
         <>
             <section className={classes.categorySection}>
                 <div className={classes.categoryBlock}>
-                    <CategoryItem img='CategoryItem1.png' title="Штукатурки"></CategoryItem>
+                    <CategoryItem  img='CategoryItem1.png' title="Штукатурки"></CategoryItem>
                     <CategoryItem img='CategoryItem2.png' title="Шпаклевки"></CategoryItem>
                     <CategoryItem img='CategoryItem3.png' title="Плиточный клей "></CategoryItem>
                     <CategoryItem img='CategoryItem4.png' title="Монтажные смеси"></CategoryItem>

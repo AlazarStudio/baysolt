@@ -15,7 +15,7 @@ import Sertificate from "../Blocks/Sertificate/Sertificate";
 
 function getFileExtension(filename) {
     return filename.slice(((filename.lastIndexOf(".") - 1) >>> 0) + 2);
-  }
+}
 
 function DocumentsPage({ children, ...props }) {
     return (
@@ -24,8 +24,20 @@ function DocumentsPage({ children, ...props }) {
             <CenterBlock gap={"80px"} margin={"40px 0"}>
 
                 <Text color={"#fff"} fontSize={"24px"}> ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ И СЕРТИФИКАТЫ НА СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ </Text>
-                <WidthBlock flexDirection={"row"}>
 
+                <WidthBlock flexDirection={"row"}>
+                    <GetData tableName="certificate">
+                        {(data) =>
+                            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "40px" }}>
+                                {data.slice(0, 3).map((item) =>
+                                (
+                                    <div style={{ width: "31%", height: "520px", backgroundColor: "#D9D9D9" }}>
+                                        <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src={`admin/img/${item.img}`} alt="" srcset="" />
+                                    </div>
+                                ))}
+                            </div>
+                        }
+                    </GetData>
                 </WidthBlock>
             </CenterBlock>
             <GetData tableName="docs">

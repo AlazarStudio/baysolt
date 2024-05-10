@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import SectionMain from "../Sections/SectionMain/SectionMain";
 import SectionCategory from "../Sections/SectionCategory/SectionCategory";
@@ -61,9 +62,9 @@ function MainPage({ children, ...props }) {
 
         <GetData tableName="item">
           {(data) =>
-            <CenterBlock gap={"40px"} margin={"60px 0 40px 0"}>
+            <CenterBlock gap={"40px"} >
               <WidthBlock gap={"40px"}>
-                
+
                 <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }} >
                   {data.slice(0, 6).map((item, index) => (
                     <ProductBlock style={{ borderRadius: "10px" }}
@@ -100,6 +101,9 @@ function MainPage({ children, ...props }) {
 
         <WidthBlock>
           <Sertificate />
+          <Link to="/documents" style={{ width: "130px", height: "42px", alignSelf: "flex-end", color: "#fff", fontSize: "14px", padding: "12px 22px", backgroundColor: "#3e85af", cursor: "pointer" }}>
+            Подробнее
+          </Link>
         </WidthBlock>
 
         <FAQ />
@@ -111,17 +115,18 @@ function MainPage({ children, ...props }) {
         </WidthBlock>
 
         <WidthBlock>
-          <ColumnBlock gap={"15px"}>
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-            <BuyPlace />
-          </ColumnBlock>
+
+          <GetData tableName="wherebuy">
+            {(data) =>
+              <ColumnBlock gap={"15px"}>
+                {data.map((item) =>
+                (
+                  <BuyPlace region={item.region} title={item.title} number={item.number} place={item.place} />
+                ))}
+              </ColumnBlock>
+            }
+          </GetData>
+
         </WidthBlock>
 
         <WidthBlock>

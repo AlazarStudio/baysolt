@@ -31,15 +31,15 @@ function FilterBlock({ updateFilteredObjects }) {
                 name="category"
                 value={filters.category}
                 onChange={handleCategoryChange}
-                style={{color: '#000000'}}
+                style={{color: '#fff'}}
             >
-                <option value="Все категории">Все категории</option>
-                <option value="Шпаклевки">Шпаклевки</option>
-                <option value="Штукатурки">Штукатурки</option>
-                <option value="Наливные полы">Наливные полы</option>
-                <option value="Ремонтные смеси">Ремонтные смеси</option>
-                <option value="Пазогребные плиты">Пазогребные плиты</option>
-                <option value="Гибсовые блоки">Гибсовые блоки</option>
+                <option style={{color: '#000'}} value="Все категории">Все категории</option>
+                <option style={{color: '#000'}} value="Шпаклевки">Шпаклевки</option>
+                <option style={{color: '#000'}} value="Штукатурки">Штукатурки</option>
+                <option style={{color: '#000'}} value="Наливные полы">Наливные полы</option>
+                <option style={{color: '#000'}} value="Ремонтные смеси">Ремонтные смеси</option>
+                <option style={{color: '#000'}} value="Пазогребные плиты">Пазогребные плиты</option>
+                <option style={{color: '#000'}} value="Гибсовые блоки">Гибсовые блоки</option>
             </select>
         </div>
     );

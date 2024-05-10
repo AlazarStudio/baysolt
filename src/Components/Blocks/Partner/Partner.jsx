@@ -1,28 +1,31 @@
 import React from "react";
 import classes from './Partner.module.css';
 
+import GetData from "../../GetData/GetData";
+
 function Partner({ children, ...props }) {
-    return ( 
+    return (
         <>
-            <div className={classes.partner}>
-                <div className={classes.partner_item}>
-                    <div className={classes.partner_item__img}>
-                        <img src="/partner1.png" alt="" />
+
+
+            <GetData tableName="partner">
+                {(data) =>
+                    <div className={classes.partner}>
+                        {data.map((item) =>
+                        (
+                            <div className={classes.partner_item}>
+                                <div className={classes.partner_item__img}>
+                                    <img src={`/admin/img/${item.img}`} alt="" />
+                                </div>
+                            </div>
+                        ))}
                     </div>
-                </div>
-                <div className={classes.partner_item}>
-                    <div className={classes.partner_item__img}>
-                        <img src="/partner2.png" alt="" />
-                    </div>
-                </div>
-                <div className={classes.partner_item}>
-                    <div className={classes.partner_item__img}>
-                        <img src="/partner3.png" alt="" />
-                    </div>
-                </div>
-            </div>
+                }
+            </GetData>
+
+
         </>
-     );
+    );
 }
 
 export default Partner;
