@@ -35,15 +35,15 @@ function ProductPage({ children, ...props }) {
 
                             <ColumnBlock width={"50%"} height={"565px"} padding={"80px 40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"} justifyContent={"space-between"}>
 
-                                <Text color={"#fff"} font_size={"16px"} font_weight={"500"}>
+                                <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
                                     {data[1]}
                                 </Text>
 
-                                <Text color={"#fff"} font_size={"36px"}>
+                                <Text color={"#fff"} fontSize={"36px"}>
                                     {data[1]}
                                 </Text>
 
-                                <Text color={"#fff"} font_size={"16px"} font_weight={"500"}>
+                                <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
                                     Срок хранения {data[5]}  месяцев с даты изготовления. <br />
                                     Фасовка {data[6]}кг.  <br />
                                     ГОСТ {data[7]} <br />
@@ -55,7 +55,7 @@ function ProductPage({ children, ...props }) {
 
                         <WidthBlock height={"100%"} padding={"60px 40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"}>
 
-                            <Text color={"#fff"} font_size={"20px"} font_weight={"600"} line_height={"30px"}>
+                            <Text color={"#fff"} fontSize={"20px"} fontWeight={"600"} lineHeight={"30px"}>
                                 {data[1]}
                             </Text>
 
@@ -65,7 +65,7 @@ function ProductPage({ children, ...props }) {
 
                             <div style={{ color: "#fff" }} dangerouslySetInnerHTML={{ __html: data[2] }} />
 
-                            {/* <Text color={"#fff"} font_size={"20px"} font_weight={"400"} line_height={"50px"}>
+                            {/* <Text color={"#fff"} fontSize={"20px"} fontWeight={"400"} lineHeight={"50px"}>
                                 {data[9]}
                             </Text> */}
 
@@ -82,7 +82,7 @@ function ProductPage({ children, ...props }) {
                 {(data) =>
                     <CenterBlock gap={"40px"} margin={"60px 0 40px 0"}>
                         <WidthBlock gap={"40px"}>
-                            <Text color={"#fff"} font_size={"32px"} font_weight={"600"}>Похожие товары</Text>
+                            <Text color={"#fff"} fontSize={"32px"} fontWeight={"600"}>Похожие товары</Text>
                             <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }} >
                                 {data.slice(0, 3).map((item, index) => (
                                     <ProductBlock style={{ borderRadius: "10px" }}

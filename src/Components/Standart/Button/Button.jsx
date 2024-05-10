@@ -9,6 +9,10 @@ function Button({ children, timeLeft, ...props }) {
         height: props.height, 
         cursor: props.cursor, 
         opacity: props.opacity,
+        borderRadius: props.borderRadius,
+        border: props.border,
+        backgroundColor: props.backgroundColor,
+        color: props.color,
     };
 
     if (timeLeft > 0) {

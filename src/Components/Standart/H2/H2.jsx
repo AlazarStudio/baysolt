@@ -6,11 +6,11 @@ function H2({ children, ...props }) {
         <>
             <h2 style={{
                 fontFamily: props.font_family,
-                fontSize: props.font_size,
-                fontWeight: props.font_weight,
-                textAlign: props.text_align,
-                lineHeight: props.line_height,
-                letterSpacing: props.letter_spacing,
+                fontSize: props.fontSize,
+                fontWeight: props.fontWeight,
+                textAlign: props.textAlign,
+                lineHeight: props.lineHeight,
+                letterSpacing: props.letterSpacing,
                 width: props.width,
                 height: props.height,
                 padding: props.padding,

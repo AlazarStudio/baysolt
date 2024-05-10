@@ -11,16 +11,14 @@ function Sertificate({ children, ...props }) {
           СЕРТИФИКАТЫ НА СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ
         </H2>
 
-        <Text width={"100%"} text_align={"left"} font_size={"16px"} color={"var(--color-white)"}>
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-          ab illo inventore veritatis et quasi architecto
+        <Text width={"100%"} textAlign={"left"} fontSize={"16px"} color={"var(--color-white)"}>
+          Мы заботимся о соответствии стандартам качества, чтобы представлять нашим клиентам качественное обслуживание
         </Text>
 
         <div className={classes.sertificate_items}>
-            <div className={classes.sertificate_items__item}></div>
-            <div className={classes.sertificate_items__item}></div>
-            <div className={classes.sertificate_items__item}></div>
+          <div className={classes.sertificate_items__item}></div>
+          <div className={classes.sertificate_items__item}></div>
+          <div className={classes.sertificate_items__item}></div>
         </div>
       </div>
     </>

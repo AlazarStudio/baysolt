@@ -31,6 +31,7 @@ function FilterBlock({ updateFilteredObjects }) {
                 name="category"
                 value={filters.category}
                 onChange={handleCategoryChange}
+                style={{color: '#000000'}}
             >
                 <option value="Все категории">Все категории</option>
                 <option value="Шпаклевки">Шпаклевки</option>

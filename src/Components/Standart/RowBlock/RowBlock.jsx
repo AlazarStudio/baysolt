@@ -7,9 +7,14 @@ function RowBlock({ children, ...props }) {
             <div className={classes.RowBlock} style={{
                 width: props.width,
                 height: props.height,
+                padding: props.padding,
                 gap: props.gap,
                 justifyContent: props.justifyContent,
-                background: `url(${props.background})`,
+                alignItems: props.alignItems,
+                border: props.border,
+                borderRadius: props.borderRadius,
+                backgroundColor: props.backgroundColor,
+                backgroundImage: `url(${props.backgroundImage})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover'
             }}>

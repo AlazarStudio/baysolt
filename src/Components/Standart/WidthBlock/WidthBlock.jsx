@@ -8,6 +8,7 @@ function WidthBlock({ children, ...props }) {
                 width: props.width,
                 height: props.height,
                 padding: props.padding,
+                flexDirection: props.flexDirection,
                 gap: props.gap,
                 backgroundColor: props.backgroundColor,
                 backgroundImage: `url(${props.background})`,
