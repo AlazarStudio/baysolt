@@ -3,10 +3,11 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: 690px;
+    min-height: calc(100vh - 120px);
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
 }
 
 .mainBlock {
