@@ -38,7 +38,7 @@ function AboutPage({ children, ...props }) {
                         <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"} lineHeight={"24px"}>
                             Главный принцип нашей работы - все внимание интересам клиента. Современные технологии, большой опыт  работы, а также тесное сотрудничество с ведущими российскими компаниями - все это позволяет нам содействовать успеху каждого нашего клиента.
                         </Text>
-                        <ColumnBlock gap={"25px"} padding={"45px"}>
+                        <ColumnBlock gap={"25px"} padding={"45px 0"}>
                             <RowBlock gap={"40px"}>
                                 <img src={`${about_img_1}`} alt="" srcset="" />
                                 <Text color={"#fff"}>

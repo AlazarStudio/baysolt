@@ -8,7 +8,7 @@ function ProductionPage({ children, ...props }) {
     
     return (
         <>
-            <SectionMain img={img} />
+            {/* <SectionMain img={img} /> */}
             <GetData tableName="item">
                 {(data) => <SectionProduction productData={data} />} 
             </GetData>

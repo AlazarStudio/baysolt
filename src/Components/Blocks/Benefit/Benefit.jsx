@@ -5,6 +5,9 @@ function Benefit({ children, ...props }) {
   return (
     <>
       <div className={classes.benefit_item}>
+        <div className={classes.benefit_item__img}>
+          <img src={props.img} alt="" />
+        </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -15,6 +18,9 @@ function Benefit({ children, ...props }) {
       </div>
 
       <div className={classes.benefit_item}>
+        <div className={classes.benefit_item__img}>
+          <img src={props.img} alt="" />
+        </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -25,6 +31,9 @@ function Benefit({ children, ...props }) {
       </div>
 
       <div className={classes.benefit_item}>
+        <div className={classes.benefit_item__img}>
+          <img src={props.img} alt="" />
+        </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem

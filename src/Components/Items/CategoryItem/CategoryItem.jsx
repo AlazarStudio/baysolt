@@ -8,7 +8,6 @@ function CategoryItem({ children, ...props }) {
         <>
             <Link to={categoryPath} className={classes.categoryItem}>
                 <div className={classes.categoryItemBack}>
-
                     <div className={classes.categoryItemImg}>
                         <img src={props.img} alt="" />
                     </div>
