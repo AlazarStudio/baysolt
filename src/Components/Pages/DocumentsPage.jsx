@@ -50,9 +50,9 @@ function DocumentsPage({ children, ...props }) {
                                 {/* <a href={`/admin/img/${item.img}`} target={"_blank"} borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"}>
                                     Смотреть
                                 </a> */}
-                                <Button borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"} onClick={() => window.open(`/admin/img/${item.img}`)}>
+                                <div className={"button_docs"} borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"} onClick={() => window.open(`/admin/img/${item.img}`)}>                                    Смотреть
                                     Смотреть
-                                </Button>
+                                </div>
                             </WidthBlock>
                         ))}
 

@@ -36,8 +36,28 @@ table {
 }
 
 table tbody tr {
-    width: 100%;
+  width: 100%;
 }
 
 table tbody tr:last-child {
+}
+
+.button_docs {
+  width: 130px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--color-white);
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17.07px;
+  padding: 12px 22px;
+  background-color: var(--color-lightblue);
+  cursor: pointer;
+}
+
+.button_docs:hover {
+  background-color: #399fda;
 }
