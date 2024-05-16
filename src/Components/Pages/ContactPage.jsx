@@ -20,7 +20,7 @@ function ContactPage({ children, ...props }) {
                 <WidthBlock flexDirection={"row"}>
                     <ColumnBlock width={"420px"} gap={"35px"}>
 
-                        <RowBlock alignItem={"center"} justifyContent={"space-between"} padding={"40px 40px"} borderRadius={"20px"} border={"1px solid #fff"}>
+                        <RowBlock alignItems={"center"} justifyContent={"space-between"} padding={"40px 40px"} borderRadius={"20px"} border={"1px solid #fff"}>
                             <div style={{ height:"40px"}}>
                                 <img src={`${geo_img}`} alt="" style={{ width: "100%", objectFit: "cover" }} />
                             </div>

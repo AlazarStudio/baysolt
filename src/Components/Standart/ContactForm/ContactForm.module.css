@@ -1,0 +1,55 @@
+.FeedbackForm {
+  display: flex;
+  width: 835px;
+  /* height: 960px; */
+  border: 1px solid #ffffff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 0;
+  border-radius: 20px;
+}
+
+.FeedbackLabel {
+  width: 580px;
+  height: 55px;
+  border-radius: 10px;
+  padding: 0 30px;
+}
+
+.FeedbackLabelComment {
+  width: 580px;
+  height: 360px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.FeedbackButton {
+  width: 230px;
+  height: 55px;
+  padding: 15px 30px;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.FeedbackCheckLabel {
+  color: #ffffff;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.5px;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.FeedbackCheckbox {
+
+}
+
+
+/*  */
+
+

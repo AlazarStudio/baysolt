@@ -6,7 +6,8 @@ function Benefit({ children, ...props }) {
     <>
       <div className={classes.benefit_item}>
         <div className={classes.benefit_item__img}>
-          <img src={props.img} alt="" />
+          {/* <img src={props.img} alt="" /> */}
+          <img src={"admin/img/f1.jpg"} alt="" />
         </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>
@@ -19,7 +20,8 @@ function Benefit({ children, ...props }) {
 
       <div className={classes.benefit_item}>
         <div className={classes.benefit_item__img}>
-          <img src={props.img} alt="" />
+          {/* <img src={props.img} alt="" /> */}
+          <img src={"admin/img/f1.jpg"} alt="" />
         </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>
@@ -32,7 +34,8 @@ function Benefit({ children, ...props }) {
 
       <div className={classes.benefit_item}>
         <div className={classes.benefit_item__img}>
-          <img src={props.img} alt="" />
+          {/* <img src={props.img} alt="" /> */}
+          <img src={"admin/img/f1.jpg"} alt="" />
         </div>
         <div className={classes.benefit_item__title}>Lorem ipsum</div>
         <div className={classes.benefit_item__desc}>

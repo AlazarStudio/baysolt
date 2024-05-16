@@ -11,11 +11,13 @@
 }
 
 .benefit_item__img {
-
+    width: 100%;
 }
 
 .benefit_item__img img {
-    
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .benefit_item__title {

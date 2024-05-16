@@ -47,11 +47,9 @@ function DocumentsPage({ children, ...props }) {
                         (
                             <WidthBlock flexDirection={"row"} height={"96px"} alignItems={"center"} justifyContent={"space-between"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"10px"}>
                                 <Text color={"#fff"}>{item.title + "." + getFileExtension(item.img)}</Text>
-                                {/* <a href={`/admin/img/${item.img}`} target={"_blank"} borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"}>
-                                    Смотреть
-                                </a> */}
+
                                 <div className={"button_docs"} borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"} onClick={() => window.open(`/admin/img/${item.img}`)}>                                    Смотреть
-                                    Смотреть
+                                    {/* check */}
                                 </div>
                             </WidthBlock>
                         ))}
