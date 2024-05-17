@@ -28,7 +28,7 @@ function DocumentsPage({ children, ...props }) {
                 <WidthBlock flexDirection={"row"}>
                     <GetData tableName="certificate">
                         {(data) =>
-                            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "40px" }}>
+                            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "40px", width: "100%" }}>
                                 {data.slice(0, 3).map((item) =>
                                 (
                                     <div style={{ width: "31%", height: "520px", backgroundColor: "#D9D9D9" }}>

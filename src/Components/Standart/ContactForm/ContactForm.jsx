@@ -21,9 +21,31 @@ function ContactForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Здесь можно добавить логику для отправки данных на сервер или другие действия
-        console.log(formData);
+    
+        fetch('../mail/mail.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.text(); // если сервер вернул успешный статус
+            }
+            throw new Error('Ошибка при отправке данных на сервер.');
+        })
+        .then(data => {
+            // Здесь вы можете обработать ответ от сервера, если это необходимо
+            console.log(data);
+            // Например, если сервер возвращает сообщение об успешной отправке, вы можете перенаправить пользователя
+            // window.location.href = '/success.html';
+        })
+        .catch(error => {
+            console.error('Произошла ошибка:', error);
+        });
     };
+    
 
     return (
         <form className={classes.FeedbackForm} onSubmit={handleSubmit}>
