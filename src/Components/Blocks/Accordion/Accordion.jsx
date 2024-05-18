@@ -13,6 +13,10 @@ function Accordion({ children, title, ...props }) {
       <div className={classes.accordion}>
         <div className={classes.accordionHeader} onClick={toggle}>
           {title}
+          <div>
+            ⯆
+          </div>
+          
         </div>
         <div className={`${classes.accordionBody} ${isOpen ? `${classes.accordionBody_open}` : "closed"}`}>
           {children}

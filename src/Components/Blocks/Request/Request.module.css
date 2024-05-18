@@ -1,11 +1,17 @@
+.request_block {
+    display: flex;
+    background-color: var(--color-perlblue);
+    border-radius: 10px;
+    padding: 80px;
+}
+
 .request {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 35px;
-    padding: 80px;
     background-color: var(--color-perlblue);
-    border-radius: 10px;
+    
 }
 
 .request_title {
@@ -23,4 +29,8 @@
     line-height: 24px;
     color: var(--color-white);
     width: 45%;
+}
+
+.request_form {
+
 }

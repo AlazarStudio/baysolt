@@ -10,14 +10,19 @@ header {
 
 .headerLink {
   color: #fff;
+  padding: 10px;
+  border-top: 2px solid transparent;
+}
 
+.headerLink.active {
+  border-top: 2px solid #fff;
 }
 
 .headerSection {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 55px;
+  gap: 10px;
   width: var(--width-block);
 }
 
@@ -51,8 +56,8 @@ header {
   position: absolute;
   background-color: #0a1f3a;
   min-width: 160px;
-  /* box-shadow: 0 0 8px 16px rgba(0, 0, 0, 0.4); */
-  box-shadow: 0px 0px 8px 4px #3e85af;
+  box-shadow: 0 0 8px 4px rgba(69, 69, 69, 0.2);
+  /* box-shadow: 0px 0px 8px 4px #3e85af; */
   z-index: 1;
   margin-top: 49px;
   border-top: 1px solid #3e85af;
