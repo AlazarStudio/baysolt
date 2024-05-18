@@ -46,7 +46,10 @@
   gap: 30px;
 }
 
-.FeedbackCheckbox {
+.SuccessMessage {
+  font-size: 18px;
+  color: #4CAF50; 
+  margin-bottom: 20px;
 }
 
 /*  */

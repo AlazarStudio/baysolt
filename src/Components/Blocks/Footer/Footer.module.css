@@ -4,14 +4,9 @@ footer {
     align-items: center;
     justify-content: center;
     background: #0A1F3A;
-    height: 200px;
     color: #fff;
     width: 100%;
     margin-top: 80px;
-}
-
-.footerLink {
-    color: #3E85AF;
 }
 
 .footerSection {
@@ -30,11 +25,22 @@ footer {
     border-bottom: 1px solid #3E85AF;
 }
 
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .footerLinks {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 25px 0;
+}
+
+.footerLink {
+    color: #afafaf;
+    /* color: #3E85AF; */
 }
 
 .footerImg {

@@ -22,12 +22,12 @@ import Partner from "../Blocks/Partner/Partner";
 import GetData from "../GetData/GetData";
 
 function MainPage({ children, ...props }) {
-  let img = "background_main.png";
+  let img = "/background_main.png";
 
   return (
     <>
-      <ColumnBlock gap={"80px"} alignItems={"center"}>
-        <SectionMain img={img} />
+      <ColumnBlock width="100%" gap={"80px"} alignItems={"center"}>
+        <SectionMain imgs={["/background_main.png", "/background_main.png", "/background_main.png", "/background_main.png"]} />
 
         {/* <GetData tableName="item" /> */}
 
@@ -93,7 +93,7 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        <WidthBlock>
+        <WidthBlock id={"wherebuy"}>
 
           <GetData tableName="wherebuy">
             {(data) =>

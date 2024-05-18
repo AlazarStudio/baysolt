@@ -10,6 +10,7 @@ function ContactForm() {
         comment: "",
         agreement: false,
     });
+    const [successMessage, setSuccessMessage] = useState(""); // Новое состояние для уведомления
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -21,39 +22,42 @@ function ContactForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
-        fetch('../mail/mail.php', {
+
+        fetch('mail/mail.php', { // Убедитесь, что путь к PHP файлу правильный
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         })
-        .then(response => {
-            if (response.ok) {
-                return response.text(); // если сервер вернул успешный статус
-            }
-            throw new Error('Ошибка при отправке данных на сервер.');
-        })
+        .then(response => response.json())
         .then(data => {
-            // Здесь вы можете обработать ответ от сервера, если это необходимо
-            console.log(data);
-            // Например, если сервер возвращает сообщение об успешной отправке, вы можете перенаправить пользователя
-            // window.location.href = '/success.html';
+            if (data.success) {
+                setSuccessMessage("Сообщение успешно отправлено!"); // Устанавливаем уведомление об успешной отправке
+                setFormData({ // Очищаем форму
+                    fullName: "",
+                    phone: "",
+                    email: "",
+                    comment: "",
+                    agreement: false,
+                });
+            } else {
+                console.error("Произошла ошибка:", data.message);
+            }
         })
         .catch(error => {
             console.error('Произошла ошибка:', error);
         });
     };
-    
 
     return (
         <form className={classes.FeedbackForm} onSubmit={handleSubmit}>
             <Text fontSize="24px" fontWeight="600" color="#fff" margin="0 0 30px">
                 Обратная связь
             </Text>
+            {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>} {/* Отображение уведомления */}
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="text"
                         name="fullName"
@@ -65,7 +69,7 @@ function ContactForm() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="tel"
                         name="phone"
@@ -77,7 +81,7 @@ function ContactForm() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="email"
                         name="email"
@@ -89,7 +93,7 @@ function ContactForm() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <textarea className={classes.FeedbackLabelComment}
                         name="comment"
                         value={formData.comment}
@@ -102,13 +106,13 @@ function ContactForm() {
             <div style={{width:'580px'}}>
                 <label className={classes.FeedbackCheckLabel}>
                     <input className={classes.FeedbackCheckbox}
-                        type="radio"
+                        type="checkbox"
                         name="agreement"
                         checked={formData.agreement}
                         onChange={handleChange}
                         required
                     />
-                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями догов-оферты на оказание комлексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
+                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями договора-оферты на оказание комплексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
                 </label>
             </div>
             <button className={classes.FeedbackButton} type="submit">Отправить</button>

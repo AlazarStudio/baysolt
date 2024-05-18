@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import classes from './ContactFormSmall.module.css';
-import Text from "../Text/Text";
 
 function ContactFormSmall() {
     const [formData, setFormData] = useState({
@@ -10,6 +9,7 @@ function ContactFormSmall() {
         comment: "",
         agreement: false,
     });
+    const [successMessage, setSuccessMessage] = useState(""); 
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -21,33 +21,39 @@ function ContactFormSmall() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-    
-        fetch('../mail/mail.php', {
+
+        fetch('mail/mail.php', { 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         })
-        .then(response => {
-            if (response.ok) {
-                return response.text(); 
-            }
-            throw new Error('Ошибка при отправке данных на сервер.');
-        })
+        .then(response => response.json())
         .then(data => {
-            console.log(data);
+            if (data.success) {
+                setSuccessMessage("Сообщение успешно отправлено!");
+                setFormData({ 
+                    fullName: "",
+                    phone: "",
+                    email: "",
+                    comment: "",
+                    agreement: false,
+                });
+            } else {
+                console.error("Произошла ошибка:", data.message);
+            }
         })
         .catch(error => {
             console.error('Произошла ошибка:', error);
         });
     };
-    
 
     return (
         <form className={classes.FeedbackForm} onSubmit={handleSubmit}>
+            {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>}
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="text"
                         name="fullName"
@@ -59,7 +65,7 @@ function ContactFormSmall() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="tel"
                         name="phone"
@@ -71,7 +77,7 @@ function ContactFormSmall() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <input className={classes.FeedbackLabel}
                         type="email"
                         name="email"
@@ -83,7 +89,7 @@ function ContactFormSmall() {
                 </label>
             </div>
             <div>
-                <label >
+                <label>
                     <textarea className={classes.FeedbackLabelComment}
                         name="comment"
                         value={formData.comment}
@@ -96,13 +102,13 @@ function ContactFormSmall() {
             <div style={{width:'380px'}}>
                 <label className={classes.FeedbackCheckLabel}>
                     <input className={classes.FeedbackCheckbox}
-                        type="radio"
+                        type="checkbox"
                         name="agreement"
                         checked={formData.agreement}
                         onChange={handleChange}
                         required
                     />
-                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями догов-оферты на оказание комлексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
+                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями договора-оферты на оказание комплексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
                 </label>
             </div>
             <button className={classes.FeedbackButton} type="submit">Отправить</button>

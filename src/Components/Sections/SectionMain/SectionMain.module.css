@@ -2,13 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    /* width: var(--width-block); */
     min-height: calc(100vh - 120px);
     height: 100%;
+    width: 100%;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
 }
 
 .mainBlock {
@@ -24,4 +23,31 @@
     font-weight: 500;
     line-height: 97.52px;
     color: #fff;
+}
+
+.mainslider {
+    width: 100%;
+    height: 100vh;
+    position: relative; /* добавлено */
+}
+
+.mySwiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* добавлено */
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%; /* Задать фиксированную ширину для каждого слайда */
 }
