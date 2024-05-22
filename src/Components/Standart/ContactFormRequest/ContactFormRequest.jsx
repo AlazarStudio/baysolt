@@ -1,17 +1,19 @@
 import React, { useState } from "react";
-import classes from './ContactForm.module.css';
+import classes from './ContactFormRequest.module.css';
 import Text from "../Text/Text";
 import Button from "../Button/Button";
 
-function ContactForm() {
+function ContactFormRequest({ itemName }) {
     const [formData, setFormData] = useState({
         fullName: "",
         phone: "",
         email: "",
         comment: "",
+        item: itemName,
         agreement: false,
     });
-    const [successMessage, setSuccessMessage] = useState(""); // Новое состояние для уведомления
+    const [successMessage, setSuccessMessage] = useState("");
+    const [errorMessage, setErrorMessage] = useState("");
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -24,39 +26,45 @@ function ContactForm() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('mail/mail.php', { 
+        fetch('/mail/request.php', {  // Убедитесь, что путь корректен
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    setSuccessMessage("Сообщение успешно отправлено!"); 
-                    setFormData({
-                        fullName: "",
-                        phone: "",
-                        email: "",
-                        comment: "",
-                        agreement: false,
-                    });
-                } else {
-                    console.error("Произошла ошибка:", data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Произошла ошибка:', error);
-            });
+        .then(response => {
+            if (!response.ok) {  // Проверка на успешный ответ
+                return response.text().then(text => { throw new Error(text) });
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                setSuccessMessage("Сообщение успешно отправлено!");
+                setFormData({
+                    fullName: "",
+                    phone: "",
+                    email: "",
+                    comment: "",
+                    item: itemName,
+                    agreement: false,
+                });
+            } else {
+                console.error("Произошла ошибка:", data.message);
+                setErrorMessage(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Произошла ошибка:', error);
+            setErrorMessage('Произошла ошибка при отправке формы.');
+        });
     };
 
     return (
         <form className={classes.FeedbackForm} onSubmit={handleSubmit}>
-            <Text fontSize="24px" fontWeight="600" color="#fff" margin="0 0 30px">
-                Обратная связь
-            </Text>
-            {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>} 
+            {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>}
+            {errorMessage && <div className={classes.ErrorMessage}>{errorMessage}</div>}
             <div>
                 <label>
                     <input className={classes.FeedbackLabel}
@@ -121,4 +129,4 @@ function ContactForm() {
     );
 }
 
-export default ContactForm;
+export default ContactFormRequest;

@@ -107,7 +107,7 @@ function MainPage({ children, ...props }) {
               <ColumnBlock gap={"15px"}>
                 {data.map((item) =>
                 (
-                  <BuyPlace region={item.region} title={item.title} number={item.number} number2={item.number2} number3={item.number3} place={item.place} />
+                  <BuyPlace region={item.region} title={item.title} number={item.number} number2={item.number2} number3={item.number3} place={item.place} placeRef={item.placeref} />
                 ))}
               </ColumnBlock>
             }

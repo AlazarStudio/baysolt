@@ -24,7 +24,7 @@ function BuyPlace({ children, ...props }) {
             {props.number3}
           </a>
         </div>
-        <div className={classes.buyPlace_item__place}> {props.place} </div>
+        <a href={`${props.placeRef}`} target="_blank" className={classes.buyPlace_item__place}> {props.place} </a>
       </div>
     </>
   );

@@ -45,7 +45,7 @@ function Footer({ children, ...props }) {
                             <Link className={classes.footerLink} target="_blank" to={"https://yandex.ru/maps/11019/ust'-dzheguta/house/kurortnaya_ulitsa_381a/YEgYfwFoSkwFQFpufXx0cHhmbA==/?ll=41.968391%2C44.051459&z=17"}>
                                 369301 Россия, Карачаево-Черкесская республика, <br /> г. Усть-Джегута, ул. Курортная, д.381 корпус А
                             </Link>
-                            <Text>
+                            <Text color={"#afafaf"}> 
                                 info@monolit-ug.com
                             </Text>
 
