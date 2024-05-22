@@ -7,6 +7,7 @@ import SectionCategory from "../Sections/SectionCategory/SectionCategory";
 import ColumnBlock from "../Standart/ColumnBlock/ColumnBlock";
 import H2 from "../Standart/H2/H2";
 import Text from "../Standart/Text/Text";
+import Button from "../Standart/Button/Button";
 import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import RowBlock from "../Standart/RowBlock/RowBlock";
 import WidthBlock from "../Standart/WidthBlock/WidthBlock";
@@ -27,7 +28,7 @@ function MainPage({ children, ...props }) {
   return (
     <>
       <ColumnBlock width="100%" gap={"80px"} alignItems={"center"}>
-        <SectionMain imgs={["/background_main.png", "/background_main.png", "/background_main.png", "/background_main.png"]} />
+        <SectionMain />
 
         {/* <GetData tableName="item" /> */}
 
@@ -40,25 +41,31 @@ function MainPage({ children, ...props }) {
         </WidthBlock>
 
         <GetData tableName="item">
-          {(data) =>
-            <CenterBlock gap={"40px"} >
-              <WidthBlock gap={"40px"}>
+          {(data) => {
+            // Фильтруем элементы, у которых поле favorite содержит "Популярный" и не является null
+            const favoriteItems = data
+              .filter(item => item.favorite && item.favorite.includes("Популярный"))
+              .slice(0, 3);
 
-                <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }} >
-                  {data.slice(0, 6).map((item, index) => (
-                    <ProductBlock style={{ borderRadius: "10px" }}
-                      key={index}
-                      img={item.img}
-                      title={item.title}
-                      linkTitle={item.id}
-                    />
-                  ))}
-                </div>
-              </WidthBlock>
-            </CenterBlock>
-          }
+            return (
+              <CenterBlock gap={"40px"}>
+                <WidthBlock gap={"40px"}>
+                  <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }}>
+                    {favoriteItems.map((item, index) => (
+                      <ProductBlock
+                        style={{ borderRadius: "10px" }}
+                        key={index}
+                        img={item.img}
+                        title={item.title}
+                        linkTitle={item.id}
+                      />
+                    ))}
+                  </div>
+                </WidthBlock>
+              </CenterBlock>
+            );
+          }}
         </GetData>
-
 
         <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
@@ -80,9 +87,9 @@ function MainPage({ children, ...props }) {
 
         <WidthBlock>
           <Sertificate />
-          <Link to="/documents" style={{ width: "130px", height: "42px", alignSelf: "flex-end", color: "#fff", fontSize: "14px", padding: "12px 22px", backgroundColor: "#3e85af", cursor: "pointer" }}>
+          <Button link="/documents" >
             Подробнее
-          </Link>
+          </Button>
         </WidthBlock>
 
         <FAQ />
@@ -100,7 +107,7 @@ function MainPage({ children, ...props }) {
               <ColumnBlock gap={"15px"}>
                 {data.map((item) =>
                 (
-                  <BuyPlace region={item.region} title={item.title} number={item.number} place={item.place} />
+                  <BuyPlace region={item.region} title={item.title} number={item.number} number2={item.number2} number3={item.number3} place={item.place} />
                 ))}
               </ColumnBlock>
             }

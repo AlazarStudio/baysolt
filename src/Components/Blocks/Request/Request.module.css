@@ -1,36 +1,38 @@
 .request_block {
-    display: flex;
-    background-color: var(--color-perlblue);
-    border-radius: 10px;
-    padding: 80px;
+  display: flex;
+  background-color: var(--color-perlblue);
+  border-radius: 10px;
+  /* padding: 80px; */
+  gap: 40px;
 }
 
 .request {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    gap: 35px;
-    background-color: var(--color-perlblue);
-    
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  gap: 35px;
+  background-color: var(--color-perlblue);
+  width: 50%;
 }
 
 .request_title {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 29.26px;
-    color: var(--color-white);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--color-white);
 }
 
 .request_desc {
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    color: var(--color-white);
-    width: 45%;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-white);
+  width: 100%;
 }
 
 .request_form {
-
+    padding: 40px 40px 40px 0;
+  width: 50%;
 }

@@ -8,13 +8,11 @@ function Request({ children, ...props }) {
       <div className={classes.request_block}>
 
         <div className={classes.request}>
-          <div className={classes.request_title}>Оставить заявку</div>
+          {/* <div className={classes.request_title}>Оставить заявку</div>
           <div className={classes.request_desc}>
-            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-            ab illo inventore veritatis et quasi architecto beatae vitae dicta
-            sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          </div>
+            asdf
+          </div> */}
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c940d7b9467e484242384e180fbe55a5795fbf6ed55fdc160bec75a2aa3d02d&amp;source=constructor" width="630" height="100%" frameborder="0"></iframe>
         </div>
 
         <div className={classes.request_form}>

@@ -7,11 +7,10 @@
 
 .filter select {
     width: 20%;
-    border: 1px solid #8C8C8C;
     border-radius: 30px;
     padding: 15px 25px;
     cursor: pointer;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -19,6 +18,21 @@
     background: #FFFFFF1A;
     border: none;
     color: var(--color-white);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('/icons/chevron-down.png'); /* Путь к вашему значку */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+.filter select option {
+    color: #fff;
+    background: #3e85af; /* Белый фон для опций */
+    height: 80px;
+    width: 80%;
+    padding: 20px;
 }
 
 .filter input {
@@ -32,6 +46,6 @@
     color: var(--color-white);
 }
 
-.filter input::placeholder{
+.filter input::placeholder {
     color: #fff;
 }

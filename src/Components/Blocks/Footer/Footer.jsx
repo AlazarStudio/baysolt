@@ -18,7 +18,7 @@ function Footer({ children, ...props }) {
                             <img src={`${baysolt_img}`} alt="" />
                         </Link>
                         <div className={classes.footerNav}>
-                            <Text padding="10px 0" fontSize="20px" >Продукция</Text>
+                            <Text padding="0 0 10px 0" fontSize="20px" >Продукция</Text>
                             <Link className={classes.footerLink} to="/production?category=Штукатурки">Штукатурки</Link>
                             <Link className={classes.footerLink} to="/production?category=Шпаклевки">Шпаклевки</Link>
                             <Link className={classes.footerLink} to="/production?category=Плиточный клей">Плиточный клей</Link>
@@ -26,31 +26,34 @@ function Footer({ children, ...props }) {
                         </div>
 
                         <div className={classes.footerNav}>
-                            <Text padding="10px 0" fontSize="20px" >Продукция</Text>
+                            <Text padding="0 0 10px 0" fontSize="20px" >Продукция</Text>
                             <Link className={classes.footerLink} to="/production?category=Наливные полы">Наливные полы</Link>
                             <Link className={classes.footerLink} to="/production?category=Ремонтные смеси">Ремонтные смеси</Link>
                             <Link className={classes.footerLink} to="/production?category=Пазогребные плиты">Пазогребные плиты</Link>
                             <Link className={classes.footerLink} to="/production?category=Гибсовые блоки">Гибсовые блоки</Link>
                         </div>
                         <div className={classes.footerNav}>
-                            <Text padding="10px 0" fontSize="20px" >Компания</Text>
+                            <Text padding="0 0 10px 0" fontSize="20px" >Компания</Text>
                             <Link className={classes.footerLink} to="/about">О нас</Link>
                             <Link className={classes.footerLink} to="/documents">Документы</Link>
-                            <Link className={classes.footerLink} to="/documents">Документы</Link>
-                            <Link className={classes.footerLink} to="/#wherebuy">Где купить</Link>
-
                         </div>
                         <div className={classes.footerNav}>
-                            <Text padding="10px 0" fontSize="20px" >Контакты</Text>
-                            <Link className={classes.footerLink} to="tel:+79283073000">
-                                8 (928) 307-30-00
+                            <Text padding="0 0 10px 0" fontSize="20px" >Контакты</Text>
+                            <Link className={classes.footerLink} to="tel:+79283973000">
+                                8 (928) 397-30-00
                             </Link>
+                            <Link className={classes.footerLink} target="_blank" to={"https://yandex.ru/maps/11019/ust'-dzheguta/house/kurortnaya_ulitsa_381a/YEgYfwFoSkwFQFpufXx0cHhmbA==/?ll=41.968391%2C44.051459&z=17"}>
+                                369301 Россия, Карачаево-Черкесская республика, <br /> г. Усть-Джегута, ул. Курортная, д.381 корпус А
+                            </Link>
+                            <Text>
+                                info@monolit-ug.com
+                            </Text>
 
                         </div>
                     </div>
 
                     <div className={classes.footerLinks}>
-                        <Text>Copyright © 2024 <a className={classes.footerLink} href="https://alazarstudio.ru" target="_blank">ALAZAR STUDIO.</a> All rights reserved.</Text>
+                        <Text>Copyright © 2024 BAYSOLT <br /> All rights reserved.</Text>
 
                         <a href="https://alazarstudio.ru" target="_blank" className={classes.footerImg}>
                             <img src={`${alazar_img}`} alt="" />

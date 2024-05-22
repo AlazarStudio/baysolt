@@ -16,7 +16,7 @@ import about_img_4 from "/about_img_small_4.png"
 function AboutPage({ children, ...props }) {
     return (
         <>
-            <CenterBlock gap={"80px"}>
+            <CenterBlock gap={"80px"} margin={"40px 0"}>
 
                 <RowBlock width={"1300px"} height={"320px"} backgroundColor={"#112E4F"} borderRadius={"20px"} padding={"65px 85px"} justifyContent={"space-between"}>
                     <div style={{ width: "280px" }}>

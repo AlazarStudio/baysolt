@@ -48,9 +48,10 @@ function DocumentsPage({ children, ...props }) {
                             <WidthBlock flexDirection={"row"} height={"96px"} alignItems={"center"} justifyContent={"space-between"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"10px"}>
                                 <Text color={"#fff"}>{item.title + "." + getFileExtension(item.img)}</Text>
 
-                                <div className={"button_docs"} borderRadius={"10px"} backgroundColor={"#3E85AF"} border={"none"} onClick={() => window.open(`/admin/img/${item.img}`)}>                                    Смотреть
+                                <Button onClick={() => window.open(`/admin/img/${item.img}`)}>
+                                    Смотреть
                                     {/* check */}
-                                </div>
+                                </Button>
                             </WidthBlock>
                         ))}
 

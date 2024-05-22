@@ -18,38 +18,39 @@ function ContactPage({ children, ...props }) {
             <CenterBlock gap={"80px"} margin={"40px 0"}>
                 <Text color={"#fff"} fontSize={"24px"} >Контакты</Text>
                 <WidthBlock flexDirection={"row"}>
-                    <ColumnBlock width={"420px"} gap={"35px"}>
+                    <ColumnBlock width={"50%"} gap={"35px"}>
 
-                        <RowBlock alignItems={"center"} justifyContent={"space-between"} padding={"40px 40px"} borderRadius={"20px"} border={"1px solid #fff"}>
-                            <div style={{ height:"40px"}}>
-                                <img src={`${geo_img}`} alt="" style={{ width: "100%", objectFit: "cover" }} />
+                        <RowBlock backgroundColor={"#081a31"} alignItems={"center"} gap={"20px"} padding={"20px"} borderRadius={"20px"} >
+                            <div >
+                                <img src={`${geo_img}`} alt="" />
                             </div>
                             <Text color={"#fff"} fontSize={"24px"} >
-                                our location
+                                369301 Россия, Карачаево-Черкесская республика, г. Усть-Джегута, ул. Курортная, д.381 корпус А
                             </Text>
                         </RowBlock>
 
-                        <RowBlock alignItem={"center"} justifyContent={"space-between"} padding={"40px 40px"} borderRadius={"20px"} border={"1px solid #fff"}>
-                            <div style={{ height:"40px"}}>
-                                <img src={`${phone_img}`} alt="" style={{ width: "100%", objectFit: "cover" }} />
+                        <RowBlock backgroundColor={"#081a31"} alignItem={"center"} gap={"20px"} padding={"20px"} borderRadius={"20px"} >
+                            <div >
+                                <img src={`${phone_img}`} alt="" />
                             </div>
                             <Text color={"#fff"} fontSize={"24px"} >
-                                +7 (928) 307 30 00
+                                +7 (928) 397 30 00
                             </Text>
                         </RowBlock>
 
-                        <RowBlock alignItem={"center"} justifyContent={"space-between"} padding={"40px 40px"} borderRadius={"20px"} border={"1px solid #fff"}>
-                            <div style={{ height:"40px"}}>
-                                <img src={`${mail_img}`} alt="" style={{ width: "100%", objectFit: "cover" }} />
+                        <RowBlock backgroundColor={"#081a31"} alignItem={"center"} gap={"20px"} padding={"20px"} borderRadius={"20px"} >
+                            <div >
+                                <img src={`${mail_img}`} alt="" />
                             </div>
                             <Text color={"#fff"} fontSize={"24px"} >
-                                our@gmail.com
+                                info@monolit-ug.com
                             </Text>
                         </RowBlock>
 
                     </ColumnBlock>
-                    <div style={{ width: "770px", borderRadius: "20px"}}>
-                        <img src={`${main_img}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }} />
+                    <div style={{ width: "50%", borderRadius: "20px" }}>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c940d7b9467e484242384e180fbe55a5795fbf6ed55fdc160bec75a2aa3d02d&amp;source=constructor" width="630" height="100%" frameborder="0"></iframe>
+                        {/* <img src={`${main_img}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }} /> */}
                     </div>
                 </WidthBlock>
             </CenterBlock>

@@ -4,14 +4,17 @@
     padding: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     border: 1px solid #FFFFFF;
     border-radius: 10px;
     gap: 35px;
 }
 
 .benefit_item__img {
-    width: 100%;
+    width: 80px;
+}
+.benefit_item__img img svg {
+    fill: #fff;
 }
 
 .benefit_item__img img {

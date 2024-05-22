@@ -61,3 +61,46 @@ table tbody tr:last-child {
 .button_docs:hover {
   background-color: #399fda;
 }
+
+.breadcrumbs {
+  line-height: 24px;
+}
+
+.breadcrumbs a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.breadcrumbs a:not(:last-child)::after {
+  content: "/";
+  margin: 0 8px;
+}
+
+.breadcrumbs span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+table {
+  background-color: transparent !important;
+}
+
+td {
+  border: 1px solid white !important;
+  padding: 5px !important;
+}
+
+.productText {
+  color: #fff !important;
+  font-size: 20px !important;
+  line-height: 25px !important;
+}
+
+.productText * {
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+}

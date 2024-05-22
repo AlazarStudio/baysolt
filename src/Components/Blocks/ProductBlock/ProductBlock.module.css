@@ -40,4 +40,9 @@
     padding: 12px 22px;
     background-color: var(--color-lightblue);
     cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.productions_item__btn:hover {
+    background-color: #3a92c5;
 }

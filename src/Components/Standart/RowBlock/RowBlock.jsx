@@ -11,6 +11,7 @@ function RowBlock({ children, ...props }) {
                 gap: props.gap,
                 justifyContent: props.justifyContent,
                 alignItems: props.alignItems,
+                boxShadow: props.boxShadow,
                 border: props.border,
                 borderRadius: props.borderRadius,
                 backgroundColor: props.backgroundColor,
@@ -24,4 +25,4 @@ function RowBlock({ children, ...props }) {
      );
 }
 
-export default RowBlock;
+export default RowBlock; 

@@ -17,12 +17,22 @@
     width: var(--width-block);
 }
 
+.mainTitle {
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 40px;
+    color: #fff;
+    width: 60%;
+}
+
 .mainText {
     font-family: Montserrat;
-    font-size: 80px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 97.52px;
+    line-height: 40px;
     color: #fff;
+    width: 60%;
 }
 
 .mainslider {

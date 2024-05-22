@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import GetData from "../GetData/GetData";
 import GetDataItem from "../GetData/GetDataItem";
@@ -9,6 +9,7 @@ import RowBlock from "../Standart/RowBlock/RowBlock";
 import ColumnBlock from "../Standart/ColumnBlock/ColumnBlock";
 import ProductBlock from "../Blocks/ProductBlock/ProductBlock";
 import Text from "../Standart/Text/Text";
+import Button from "../Standart/Button/Button";
 
 function ProductPage({ children, ...props }) {
     let { id } = useParams();
@@ -17,43 +18,40 @@ function ProductPage({ children, ...props }) {
 
     useEffect(() => {
         setCurrentId(id);
-        console.log(id);
     }, [id]);
 
     return (
         <>
             <GetDataItem tableName="item" id={currentId}>
                 {(data) =>
-                    // {(data) => console.log(data)}
 
                     <CenterBlock gap={"40px"} margin={"60px 0 20px 0"}>
-                        {console.log(data)}
                         <RowBlock width={"1300px"} gap={"40px"}>
-                            <ColumnBlock width={"50%"} height={"565px"} padding={"80px 40px"} backgroundColor={"#112E4F"} borderRadius={"20px"}>
+                            <ColumnBlock width={"50%"} height={"565px"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"}>
                                 <img src={`/admin/img/${data[4]}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                             </ColumnBlock>
 
-                            <ColumnBlock width={"50%"} height={"565px"} padding={"80px 40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"} justifyContent={"space-between"}>
+                            <ColumnBlock width={"50%"} height={"565px"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"} justifyContent={"space-between"}>
+                                <div className="breadcrumbs">
+                                    <Link to="/production">Продукция</Link>
+                                    <Link to={`/production?category=${data[3]}`}>{data[3]}</Link>
+                                    <span>{data[1]}</span>
+                                </div>
+
+                                <Text color={"#fff"} fontSize={"36px"}>{data[1]}</Text>
 
                                 <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
-                                    {data[1]}
+                                    Срок хранения {data[5]}  месяцев с даты изготовления. <br /> <br />
+                                    Фасовка {data[6]}кг.  <br /> <br />
+                                    {data[7]}
                                 </Text>
 
-                                <Text color={"#fff"} fontSize={"36px"}>
-                                    {data[1]}
-                                </Text>
-
-                                <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
-                                    Срок хранения {data[5]}  месяцев с даты изготовления. <br />
-                                    Фасовка {data[6]}кг.  <br />
-                                    ГОСТ {data[7]} <br />
-                                    Цена: {data[8]} руб. <br />
-                                </Text>
+                                <Button width={"100%"} backgroundColor={"#3e85af"} border={"none"}>Оставить заявку</Button>
 
                             </ColumnBlock>
                         </RowBlock>
 
-                        <WidthBlock height={"100%"} padding={"60px 40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"}>
+                        <WidthBlock height={"100%"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"}>
 
                             <Text color={"#fff"} fontSize={"20px"} fontWeight={"600"} lineHeight={"30px"}>
                                 {data[1]}
@@ -63,7 +61,7 @@ function ProductPage({ children, ...props }) {
                                 {data[2]}
                             </Text>  */}
 
-                            <div style={{ color: "#fff" }} dangerouslySetInnerHTML={{ __html: data[2] }} />
+                            <div className="productText" dangerouslySetInnerHTML={{ __html: data[2] }} />
 
                             {/* <Text color={"#fff"} fontSize={"20px"} fontWeight={"400"} lineHeight={"50px"}>
                                 {data[9]}

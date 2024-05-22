@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import classes from './ContactFormSmall.module.css';
+import Button from "../Button/Button";
+import Text from "../Text/Text";
 
 function ContactFormSmall() {
     const [formData, setFormData] = useState({
@@ -9,7 +11,7 @@ function ContactFormSmall() {
         comment: "",
         agreement: false,
     });
-    const [successMessage, setSuccessMessage] = useState(""); 
+    const [successMessage, setSuccessMessage] = useState("");
 
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
@@ -22,37 +24,40 @@ function ContactFormSmall() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('mail/mail.php', { 
+        fetch('mail/mail.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                setSuccessMessage("Сообщение успешно отправлено!");
-                setFormData({ 
-                    fullName: "",
-                    phone: "",
-                    email: "",
-                    comment: "",
-                    agreement: false,
-                });
-            } else {
-                console.error("Произошла ошибка:", data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Произошла ошибка:', error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    setSuccessMessage("Сообщение успешно отправлено!");
+                    setFormData({
+                        fullName: "",
+                        phone: "",
+                        email: "",
+                        comment: "",
+                        agreement: false,
+                    });
+                } else {
+                    console.error("Произошла ошибка:", data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Произошла ошибка:', error);
+            });
     };
 
     return (
         <form className={classes.FeedbackForm} onSubmit={handleSubmit}>
+            <Text fontSize="16px" fontWeight="600" color="#fff" margin="0">
+                Оставить заявку
+            </Text>
             {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>}
-            <div>
+            <div style={{ width: "100%" }}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="text"
@@ -64,7 +69,7 @@ function ContactFormSmall() {
                     />
                 </label>
             </div>
-            <div>
+            <div style={{ width: "100%" }}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="tel"
@@ -76,7 +81,7 @@ function ContactFormSmall() {
                     />
                 </label>
             </div>
-            <div>
+            <div style={{ width: "100%" }}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="email"
@@ -88,7 +93,7 @@ function ContactFormSmall() {
                     />
                 </label>
             </div>
-            <div>
+            <div style={{ width: "100%" }}>
                 <label>
                     <textarea className={classes.FeedbackLabelComment}
                         name="comment"
@@ -99,7 +104,7 @@ function ContactFormSmall() {
                     />
                 </label>
             </div>
-            <div style={{width:'380px'}}>
+            <div style={{ width: '100%' }}>
                 <label className={classes.FeedbackCheckLabel}>
                     <input className={classes.FeedbackCheckbox}
                         type="checkbox"
@@ -108,7 +113,7 @@ function ContactFormSmall() {
                         onChange={handleChange}
                         required
                     />
-                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями договора-оферты на оказание комплексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
+                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности.
                 </label>
             </div>
             <button className={classes.FeedbackButton} type="submit">Отправить</button>

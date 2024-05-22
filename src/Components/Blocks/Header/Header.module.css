@@ -6,9 +6,12 @@ header {
   height: 80px;
   color: #fff;
   width: 100%;
+  box-shadow: 0 -8px 20px 2px #3e85af;
 }
 
 .headerLink {
+  display: flex;
+  align-items: center;
   color: #fff;
   padding: 10px;
   border-top: 2px solid transparent;
@@ -54,12 +57,12 @@ header {
 .dropdownContent {
   cursor: pointer;
   position: absolute;
-  background-color: #0a1f3a;
+  background-color: #3e85af;
   min-width: 160px;
-  box-shadow: 0 0 8px 4px rgba(69, 69, 69, 0.2);
+  /* box-shadow: 0 0 8px 4px rgba(69, 69, 69, 0.2); */
   /* box-shadow: 0px 0px 8px 4px #3e85af; */
-  z-index: 1;
-  margin-top: 49px;
+  z-index: 10;
+  margin-top: 60px;
   border-top: 1px solid #3e85af;
   border-radius: 0 0 10px 10px;
 }
@@ -73,7 +76,7 @@ header {
 }
 
 .dropdownContent a:hover {
-  background-color: #3e85af;
+  background-color: #3a92c5;
 }
 
 .dropdownContent a:last-child {
@@ -82,4 +85,11 @@ header {
 
 .dropdown:hover .dropdownContent {
   /* display: block; */
+}
+
+/* Header.module.css */
+.chevronIcon {
+  width: 16px; /* или любой другой размер */
+  height: 16px; /* или любой другой размер */
+  margin-left: 8px; /* например, отступ слева */
 }

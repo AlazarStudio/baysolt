@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classes from './ContactForm.module.css';
 import Text from "../Text/Text";
+import Button from "../Button/Button";
 
 function ContactForm() {
     const [formData, setFormData] = useState({
@@ -30,24 +31,24 @@ function ContactForm() {
             },
             body: JSON.stringify(formData),
         })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                setSuccessMessage("Сообщение успешно отправлено!"); // Устанавливаем уведомление об успешной отправке
-                setFormData({ // Очищаем форму
-                    fullName: "",
-                    phone: "",
-                    email: "",
-                    comment: "",
-                    agreement: false,
-                });
-            } else {
-                console.error("Произошла ошибка:", data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Произошла ошибка:', error);
-        });
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    setSuccessMessage("Сообщение успешно отправлено!"); // Устанавливаем уведомление об успешной отправке
+                    setFormData({ // Очищаем форму
+                        fullName: "",
+                        phone: "",
+                        email: "",
+                        comment: "",
+                        agreement: false,
+                    });
+                } else {
+                    console.error("Произошла ошибка:", data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Произошла ошибка:', error);
+            });
     };
 
     return (
@@ -103,7 +104,7 @@ function ContactForm() {
                     />
                 </label>
             </div>
-            <div style={{width:'580px'}}>
+            <div style={{ width: '620px' }}>
                 <label className={classes.FeedbackCheckLabel}>
                     <input className={classes.FeedbackCheckbox}
                         type="checkbox"
@@ -112,10 +113,10 @@ function ContactForm() {
                         onChange={handleChange}
                         required
                     />
-                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности и условиями договора-оферты на оказание комплексных услуг, а также на получение информационных рассылок от проекта и партнеров проекта.
+                    Отправляя форму, я даю согласие на обработку персональных данных, подтверждаю согласие с политикой конфиденциальности.
                 </label>
+                <button className={classes.FeedbackButton} type="submit">Отправить</button>
             </div>
-            <button className={classes.FeedbackButton} type="submit">Отправить</button>
         </form>
     );
 }

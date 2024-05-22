@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classes from './FilterBlock.module.css';
+import GetData from "../../GetData/GetData";
 
 function FilterBlock({ updateFilteredObjects }) {
     const [filters, setFilters] = useState({
@@ -31,18 +32,21 @@ function FilterBlock({ updateFilteredObjects }) {
                 name="category"
                 value={filters.category}
                 onChange={handleCategoryChange}
-                style={{color: '#fff'}}
+                className={classes.select}
             >
-                <option style={{color: '#000'}} value="Все категории">Все категории</option>
-                <option style={{color: '#000'}} value="Шпаклевки">Шпаклевки</option>
-                <option style={{color: '#000'}} value="Штукатурки">Штукатурки</option>
-                <option style={{color: '#000'}} value="Наливные полы">Наливные полы</option>
-                <option style={{color: '#000'}} value="Ремонтные смеси">Ремонтные смеси</option>
-                <option style={{color: '#000'}} value="Пазогребные плиты">Пазогребные плиты</option>
-                <option style={{color: '#000'}} value="Гибсовые блоки">Гибсовые блоки</option>
+                <option value="Все категории">Все категории</option>
+                <GetData tableName="category">
+                    {(data) => (
+                        data.map((item) => (
+                            <option key={item.id} value={item.title}>
+                                {item.title}
+                            </option>
+                        ))
+                    )}
+                </GetData>
             </select>
         </div>
     );
-}
+};
 
 export default FilterBlock;

@@ -14,26 +14,25 @@ function SectionProduction({ productData }) {
     const [filteredObjects, setFilteredObjects] = useState([]);
 
     useEffect(() => {
-        if (categoryParam != null){
-            let filteredData = [...productData];
-            filteredData = filteredData.filter(item => item.category === categoryParam);
-            setFilteredObjects(filteredData);
-        } else {
-            setFilteredObjects(productData)
-        }
-    }, [productData]);
+        filterProducts();
+    }, [productData, categoryParam]);
 
-    const updateFilteredObjects = (category, search) => {
+    const filterProducts = (category = categoryParam, searchText = '') => {
         let filtered = [...productData];
-
 
         if (category && category !== "Все категории") {
             filtered = filtered.filter(item => item.category === category);
         }
-        if (search) {
-            filtered = filtered.filter(item => item.title.toLowerCase().includes(search.toLowerCase()));
+
+        if (searchText) {
+            filtered = filtered.filter(item => item.title.toLowerCase().includes(searchText.toLowerCase()));
         }
+
         setFilteredObjects(filtered);
+    };
+
+    const updateFilteredObjects = (category, search) => {
+        filterProducts(category, search);
     };
 
     return (

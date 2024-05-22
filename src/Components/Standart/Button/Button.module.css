@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    border: 1px solid #fff;
+    background-color: #3e85af;
+    border-radius: 10px;
     color: #FFFFFF;
     gap: 20px;
     font-size: 20px;
@@ -16,8 +16,8 @@
 }
 
 .Button:hover{
-    background-color: #fff;
-    color: #000;
+    background-color: #3a92c5 !important;
+    /* color: #000; */
 }
 
 .Button svg path{
