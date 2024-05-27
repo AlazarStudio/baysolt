@@ -29,6 +29,10 @@ header {
   width: var(--width-block);
 }
 
+.headerSectionMobile {
+  display: none;
+}
+
 .headerImg {
   width: 185px;
 }
@@ -87,9 +91,123 @@ header {
   /* display: block; */
 }
 
-/* Header.module.css */
 .chevronIcon {
-  width: 16px; /* или любой другой размер */
-  height: 16px; /* или любой другой размер */
-  margin-left: 8px; /* например, отступ слева */
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+/*  */
+
+/*  */
+
+
+@media (max-width: 768px) {
+  .headerSection {
+    display: none;
+  }
+
+  .headerImg {
+    width: 140px;
+  }
+
+  .headerSectionMobile {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .headerBlockMobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #3a92c5;
+    border-radius: 10px;
+  }
+
+  .headerImg {
+    /* margin-bottom: 20px; */
+  }
+
+  .headerLink,
+  .linkTel {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  .dropdownContent {
+    position: static;
+    margin-top: 0;
+    border-top: none;
+    border-radius: 0;
+  }
+
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .showMobileMenu {
+    display: flex;
+  }
+}
+
+
+.headerSectionMobile {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerBlockMobile {
+  display: none;
+  flex-direction: column;
+  background-color: #3a92c5;
+  border-radius: 10px;
+  position: absolute;
+  top: 80px; /* Высота заголовка */
+  right: 20px;
+  width: 200px;
+}
+
+.headerBlockMobile.show {
+  display: flex !important;
+}
+.show {
+  display: flex !important;
+}
+
+.menuIcon {
+  display: block;
+  cursor: pointer;
+  width: 24px; /* Размер иконки */
+  height: 24px; /* Размер иконки */
+}
+
+@media (max-width: 768px) {
+  .headerSection {
+    display: none;
+  }
+
+  .headerSectionMobile {
+    display: flex;
+  }
 }

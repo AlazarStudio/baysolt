@@ -1,4 +1,10 @@
-.RowBlock{
-    display: flex;
-    align-items: center;
+.RowBlock {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .RowBlock {
+    flex-direction: column;
+  }
 }

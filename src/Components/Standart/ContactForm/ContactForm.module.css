@@ -65,4 +65,32 @@
   margin-bottom: 20px;
 }
 
+.FeedbackCheckboxDiv {
+  width: 620px;
+}
+
 /*  */
+
+@media (max-width: 768px) {
+  .FeedbackForm {
+    width: 100%;
+  }
+
+  .FeedbackLabel {
+    width: 100%;
+  }
+
+  .FeedbackLabelComment {
+    width: 100%;
+  }
+
+  .FeedbackDiv {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .FeedbackCheckboxDiv {
+    width: 100%;
+    padding: 0 20px;
+  }
+}

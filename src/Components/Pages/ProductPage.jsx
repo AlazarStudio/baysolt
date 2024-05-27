@@ -42,19 +42,19 @@ function ProductPage({ children, ...props }) {
 
                         return (
                             <CenterBlock gap={"40px"} margin={"60px 0 20px 0"}>
-                                <RowBlock width={"1300px"} gap={"40px"}>
-                                    <ColumnBlock width={"50%"} height={"565px"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"}>
+                                <RowBlock className="ProductPageRowBlock">
+                                    <ColumnBlock className="ProductPageColumnBlock" >
                                         <img src={`/admin/img/${data[4]}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                     </ColumnBlock>
 
-                                    <ColumnBlock width={"50%"} height={"565px"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"} justifyContent={"space-between"}>
+                                    <ColumnBlock className="ProductPageColumnBlock">
                                         <div className="breadcrumbs">
                                             <Link to="/production">Продукция</Link>
                                             <Link to={`/production?category=${data[3]}`}>{data[3]}</Link>
                                             <span>{data[1]}</span>
                                         </div>
 
-                                        <Text color={"#fff"} fontSize={"36px"}>{data[1]}</Text>
+                                        <Text className="ProductPageText">{data[1]}</Text>
 
                                         <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
                                             Срок хранения {data[5]} месяцев с даты изготовления. <br /> <br />
@@ -66,7 +66,7 @@ function ProductPage({ children, ...props }) {
                                     </ColumnBlock>
                                 </RowBlock>
 
-                                <WidthBlock height={"100%"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"20px"} gap={"40px"}>
+                                <WidthBlock className="ProductPageWidthBlock">
                                     <Text color={"#fff"} fontSize={"20px"} fontWeight={"600"} lineHeight={"30px"}>
                                         {data[1]}
                                     </Text>

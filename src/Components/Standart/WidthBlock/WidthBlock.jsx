@@ -1,10 +1,11 @@
 import React from "react";
+import classNames from 'classnames';
 import classes from './WidthBlock.module.css';
 
-function WidthBlock({ children, ...props }) {
-    return ( 
+function WidthBlock({ children, className, ...props }) {
+    return (
         <>
-            <div {...props} className={classes.WidthBlock} style={{
+            <div {...props} className={classNames(classes.WidthBlock, className)} style={{
                 width: props.width,
                 height: props.height,
                 padding: props.padding,
@@ -21,7 +22,7 @@ function WidthBlock({ children, ...props }) {
                 {children}
             </div>
         </>
-     );
+    );
 }
 
 export default WidthBlock;

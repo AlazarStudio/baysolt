@@ -1,10 +1,11 @@
 import React from "react";
+import classNames from 'classnames';
 import classes from './CenterBlock.module.css';
 
-function CenterBlock({ children, ...props }) {
+function CenterBlock({ children, className, ...props }) {
     return ( 
         <>
-            <div {...props} className={classes.CenterBlock} style={{
+            <div {...props} className={classNames(classes.CenterBlock, className)} style={{
                 width: props.width,
                 height: props.height,
                 gap: props.gap,

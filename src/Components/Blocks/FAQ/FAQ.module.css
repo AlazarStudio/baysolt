@@ -43,3 +43,15 @@
     background-color: var(--color-background);
     border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+    .faq {
+        padding: 20px;
+    }
+    .accordion_data {
+        width: 100%;
+    }
+    .accordion_feed {
+        width: 100%;
+    }
+}

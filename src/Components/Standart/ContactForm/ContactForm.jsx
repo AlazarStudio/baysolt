@@ -57,7 +57,7 @@ function ContactForm() {
                 Обратная связь
             </Text>
             {successMessage && <div className={classes.SuccessMessage}>{successMessage}</div>} 
-            <div>
+            <div className={classes.FeedbackDiv}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="text"
@@ -69,7 +69,7 @@ function ContactForm() {
                     />
                 </label>
             </div>
-            <div>
+            <div className={classes.FeedbackDiv}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="tel"
@@ -81,7 +81,7 @@ function ContactForm() {
                     />
                 </label>
             </div>
-            <div>
+            <div className={classes.FeedbackDiv}>
                 <label>
                     <input className={classes.FeedbackLabel}
                         type="email"
@@ -93,7 +93,7 @@ function ContactForm() {
                     />
                 </label>
             </div>
-            <div>
+            <div className={classes.FeedbackDiv}>
                 <label>
                     <textarea className={classes.FeedbackLabelComment}
                         name="comment"
@@ -104,7 +104,7 @@ function ContactForm() {
                     />
                 </label>
             </div>
-            <div style={{ width: '620px' }}>
+            <div className={classes.FeedbackCheckboxDiv}>
                 <label className={classes.FeedbackCheckLabel}>
                     <input className={classes.FeedbackCheckbox}
                         type="checkbox"

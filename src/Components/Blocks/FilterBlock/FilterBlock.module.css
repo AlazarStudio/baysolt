@@ -1,51 +1,63 @@
 .filter {
-    display: flex;
-    justify-content: space-between;
-    gap: 25px;
-    margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  margin-top: 80px;
 }
 
 .filter select {
-    width: 20%;
-    border-radius: 30px;
-    padding: 15px 25px;
-    cursor: pointer;
-    font-family: Montserrat, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    outline: none;
-    background: #FFFFFF1A;
-    border: none;
-    color: var(--color-white);
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('/icons/chevron-down.png'); /* Путь к вашему значку */
-    background-repeat: no-repeat;
-    background-position: right 10px center;
-    background-size: 12px;
+  width: 20%;
+  border-radius: 30px;
+  padding: 15px 25px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  outline: none;
+  background: #ffffff1a;
+  border: none;
+  color: var(--color-white);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("/icons/chevron-down.png"); /* Путь к вашему значку */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
 }
 
 .filter select option {
-    color: #fff;
-    background: #3e85af; /* Белый фон для опций */
-    height: 80px;
-    width: 80%;
-    padding: 20px;
+  color: #fff;
+  background: #3e85af; /* Белый фон для опций */
+  height: 80px;
+  width: 80%;
+  padding: 20px;
 }
 
 .filter input {
-    width: 80%;
-    outline: none;
-    border-radius: 50px;
-    border: none;
-    padding: 15px 25px;
-    font-size: 16px;
-    background: #FFFFFF1A;
-    color: var(--color-white);
+  width: 80%;
+  outline: none;
+  border-radius: 50px;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  background: #ffffff1a;
+  color: var(--color-white);
 }
 
 .filter input::placeholder {
-    color: #fff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .filter {
+    flex-direction: column;
+  }
+  .filter select {
+    width: 100%;
+  }
+  .filter input {
+    width: 100%;
+  }
 }

@@ -17,8 +17,8 @@ function ContactPage({ children, ...props }) {
         <>
             <CenterBlock gap={"80px"} margin={"40px 0"}>
                 <Text color={"#fff"} fontSize={"24px"} >Контакты</Text>
-                <WidthBlock flexDirection={"row"}>
-                    <ColumnBlock width={"50%"} gap={"35px"}>
+                <WidthBlock className="ContactPageWidthBlock">
+                    <ColumnBlock className="ContactPageColumnBlock">
 
                         <RowBlock backgroundColor={"#081a31"} alignItems={"center"} gap={"20px"} padding={"20px"} borderRadius={"20px"} >
                             <div >
@@ -48,7 +48,7 @@ function ContactPage({ children, ...props }) {
                         </RowBlock>
 
                     </ColumnBlock>
-                    <div style={{ width: "50%", borderRadius: "20px" }}>
+                    <div className="ContactPageMap">
                     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c940d7b9467e484242384e180fbe55a5795fbf6ed55fdc160bec75a2aa3d02d&amp;source=constructor" width="630" height="100%" frameborder="0"></iframe>
                         {/* <img src={`${main_img}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "20px" }} /> */}
                     </div>

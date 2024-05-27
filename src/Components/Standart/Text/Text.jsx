@@ -1,11 +1,12 @@
 import React from "react";
+import classNames from 'classnames';
 import classes from './Text.module.css';
 
-function Text({ children, ...props }) {
+function Text({ children, className, ...props }) {
     return (
         <>
             {/* <div className={classes.Text} style={{ */}
-            <div style={{
+            <div className={classNames(classes.Text, className)} style={{
                 fontFamily: props.font_family,
                 fontSize: props.fontSize,
                 fontWeight: props.fontWeight,

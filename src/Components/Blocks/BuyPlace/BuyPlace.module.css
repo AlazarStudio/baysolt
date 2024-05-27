@@ -56,3 +56,21 @@
   font-weight: 500;
   line-height: 24px;
 }
+
+@media (max-width: 768px) {
+  .buyPlace {
+    flex-direction: column;
+  }
+  .buyPlace_item__region,
+  .buyPlace_item__title,
+  .buyPlace_item__number,
+  .buyPlace_item__place {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+
+
+
+  
+}

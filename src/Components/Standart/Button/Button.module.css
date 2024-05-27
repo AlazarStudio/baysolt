@@ -27,3 +27,11 @@
 .Button:hover svg path{
     fill: #000;
 }
+
+@media (max-width: 768px) {
+    .Button {
+        width: 100px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

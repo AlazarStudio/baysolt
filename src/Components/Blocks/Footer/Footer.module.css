@@ -50,3 +50,15 @@ footer {
 .footerImg img {
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .footerLinks {
+    padding: 25px 10px;
+    align-items: center;
+  }
+  .footerImgs {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+}

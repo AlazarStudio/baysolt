@@ -61,3 +61,27 @@
 .swiper-slide {
     width: 100%; /* Задать фиксированную ширину для каждого слайда */
 }
+
+@media (max-width: 768px) {
+    .SectionMain {
+        min-height: auto;
+        height: auto;
+    }
+    .mainBlock {
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+    .mainTitle{
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .mainText{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .mainslider {
+        height: 100%;
+    }
+
+}

@@ -104,3 +104,270 @@ td {
   font-size: inherit !important;
   line-height: inherit !important;
 }
+
+.ProductPageRowBlock {
+  width: var(--width-block);
+  gap: 40px;
+}
+
+.ProductPageColumnBlock {
+  width: 50%;
+  height: 565px;
+  padding: 40px;
+  background-color: #112e4f;
+  border-radius: 20px;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.ProductPageWidthBlock {
+  height: 100%;
+  padding: 40px;
+  background-color: #112e4f;
+  border-radius: 20px;
+  gap: 40px;
+}
+
+.ProductPageText {
+  color: #fff;
+  font-size: 36px;
+}
+
+/*  */
+
+.AboutPageRowBlock {
+  height: 320px;
+  padding: 65px 85px;
+}
+
+.AboutPageRowBlock2 {
+  gap: 150px;
+  align-items: flex-start;
+}
+
+.AboutPageText1 {
+  width: 50%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.AboutPageText2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+}
+
+.AboutPageText3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.AboutPageWidthBlock {
+  padding: 0 180px;
+}
+
+.AboutPageColumnBlock2 {
+  gap: 25px;
+  padding: 45px 0;
+}
+
+.AboutPageImg2 {
+  width: 490px;
+}
+
+.ContactPageWidthBlock {
+  flex-direction: row;
+}
+
+.ContactPageColumnBlock {
+  width: 50%;
+  gap: 35px;
+}
+
+.ContactPageMap {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.DocumentPageCertificateBlock {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+}
+
+.DocumentPageCertificate {
+  width: 31%;
+  height: 520px;
+  background-color: #d9d9d9;
+}
+
+.DocumentPageDocuments {
+  flex-direction: row;
+  height: 96px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #112e4f;
+}
+
+.DocumentPageCenterBlock {
+  gap: 80px;
+  margin: 40px 0;
+}
+
+.DocumentPageDocumentsCenterBlock {
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
+  :root {
+    --blockWidth: 100%;
+    --width-block: 100%;
+  }
+
+  h2 {
+    padding: 0 20px;
+  }
+
+  /*  */
+  .MainPageBenefit {
+    padding: 0 20px;
+  }
+  .DocumentPageCenterBlock {
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .DocumentPageDocumentsCenterBlock {
+    padding: 0 20px;
+  }
+
+  .DocumentPageDocuments {
+    height: auto;
+    padding: 20px;
+  }
+
+  .DocumentPageCertificateBlock {
+    flex-direction: column;
+  }
+
+  .DocumentPageCertificate {
+    width: 100%;
+    height: auto;
+  }
+
+  .ContactPageWidthBlock {
+    flex-direction: column;
+  }
+
+  .ContactPageColumnBlock {
+    width: 100%;
+  }
+
+  .ContactPageMap {
+    width: 100%;
+  }
+
+  .ContactPageMap iframe {
+    width: 100%;
+  }
+
+  .AboutPageCenterBlock {
+    /* padding: 0 20px; */
+    gap: 40px;
+  }
+
+  .AboutPageRowBlock {
+    height: auto;
+    padding: 20px;
+  }
+
+  .AboutPageWidthBlock {
+    padding: 0 20px;
+  }
+
+  .AboutPageColumnBlock2 {
+    padding: 20px;
+  }
+
+  .AboutPageText1 {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .AboutPageText3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .AboutPageText3 {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  .AboutPageImg2 {
+    width: 100%;
+  }
+
+  .ProductPageRowBlock {
+    gap: 20px;
+  }
+
+  .AboutPageRowBlock2 {
+    gap: 20px;
+  }
+
+  .AboutPageRowBlockImg {
+    flex-direction: row;
+  }
+
+  .ProductPageColumnBlock {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .ProductPageWidthBlock {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .ProductPageText {
+    font-size: 26px;
+  }
+
+  .productText {
+    font-size: 14px !important;
+  }
+
+  table {
+    display: flex !important;
+    width: 100%;
+  }
+
+  tbody {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 20px !important;
+  }
+
+  tr {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  td {
+    width: 100% !important;
+  }
+}

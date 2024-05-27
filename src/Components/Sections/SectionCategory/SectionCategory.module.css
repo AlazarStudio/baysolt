@@ -11,3 +11,10 @@
   gap: 34px;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .categoryBlock {
+    padding: 20px;
+    gap: 20px;
+  }
+}

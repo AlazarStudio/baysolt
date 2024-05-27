@@ -46,3 +46,13 @@
 .productions_item__btn:hover {
     background-color: #3a92c5;
 }
+
+@media (max-width: 768px) {
+    .productions_item {
+        width: 100%;
+        padding: 20px;
+    }
+    .productions_item__img {
+        height: 250px;
+    }
+}

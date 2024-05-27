@@ -74,7 +74,7 @@ function MainPage({ children, ...props }) {
         </WidthBlock>
 
         <WidthBlock>
-          <RowBlock justifyContent={"space-between"} gap={"35px"}>
+          <RowBlock className="MainPageBenefit" justifyContent={"space-between"} gap={"35px"}>
             <Benefit />
           </RowBlock>
         </WidthBlock>

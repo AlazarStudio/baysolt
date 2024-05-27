@@ -1,10 +1,11 @@
 import React from "react";
+import classNames from 'classnames';
 import classes from './RowBlock.module.css';
 
-function RowBlock({ children, ...props }) {
-    return ( 
+function RowBlock({ children, className, ...props }) {
+    return (
         <>
-            <div className={classes.RowBlock} style={{
+            <div {...props} className={classNames(classes.RowBlock, className)} style={{
                 width: props.width,
                 height: props.height,
                 padding: props.padding,
@@ -22,7 +23,7 @@ function RowBlock({ children, ...props }) {
                 {children}
             </div>
         </>
-     );
+    );
 }
 
 export default RowBlock; 

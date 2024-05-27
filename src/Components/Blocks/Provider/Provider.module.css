@@ -1,63 +1,82 @@
 .provider {
-    width: 100%;
-    background-color: var(--color-perlblue);
-    padding: 90px;
+  width: 100%;
+  background-color: var(--color-perlblue);
+  padding: 90px;
 }
 
 .provider_block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 
 .provider_block__left {
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-    color: var(--color-white);
-    width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  color: var(--color-white);
+  width: 55%;
 }
 
 .provider_block__left___title {
-    font-family: Montserrat;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 39.01px;
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 39.01px;
 }
 
 .provider_block__left___points {
-    display: flex;
-    gap: 40px 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 40px 10px;
+  flex-wrap: wrap;
 }
 
 .provider_block__left___points____point {
-    width: 49%;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-
+  width: 49%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
-.provider_block__right {    
-    width: 45%;
+.provider_block__right {
+  width: 45%;
 }
 
 .provider_block__right___img {
-    box-shadow: 0px 4px 99.2px 0px #00000040;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 45px;
-    border-radius: 10px;
+  box-shadow: 0px 4px 99.2px 0px #00000040;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 45px;
+  border-radius: 10px;
 }
 
-.provider_block__right___img img{
-    height: 100%;
+.provider_block__right___img img {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .provider {
+    padding: 0 20px;
+  }
+  .provider_block {
+    flex-direction: column-reverse;
+  }
+  .provider_block__left,
+  .provider_block__right {
+    width: 100%;
+  }
+  .provider_block__left___points {
+    gap: 20px;
+  }
+  .provider_block__left___title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

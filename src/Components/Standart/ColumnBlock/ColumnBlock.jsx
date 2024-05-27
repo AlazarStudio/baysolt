@@ -1,10 +1,11 @@
 import React from "react";
+import classNames from 'classnames';
 import classes from './ColumnBlock.module.css';
 
-function ColumnBlock({ children, ...props }) {
+function ColumnBlock({ children, className, ...props }) {
     return (
         <>
-            <div className={classes.ColumnBlock} style={{
+            <div {...props} className={classNames(classes.ColumnBlock, className)} style={{
                 width: props.width,
                 height: props.height,
                 padding: props.padding,

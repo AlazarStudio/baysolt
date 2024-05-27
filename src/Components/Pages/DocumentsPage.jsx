@@ -21,17 +21,17 @@ function DocumentsPage({ children, ...props }) {
     return (
         <>
 
-            <CenterBlock gap={"80px"} margin={"40px 0"}>
+            <CenterBlock className="DocumentPageCenterBlock">
 
                 <Text color={"#fff"} fontSize={"24px"}> ЮРИДИЧЕСКИЕ ДОКУМЕНТЫ И СЕРТИФИКАТЫ НА СУХИЕ СТРОИТЕЛЬНЫЕ СМЕСИ </Text>
 
                 <WidthBlock flexDirection={"row"}>
                     <GetData tableName="certificate">
                         {(data) =>
-                            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "40px", width: "100%" }}>
+                            <div className="DocumentPageCertificateBlock">
                                 {data.slice(0, 3).map((item) =>
                                 (
-                                    <div style={{ width: "31%", height: "520px", backgroundColor: "#D9D9D9" }}>
+                                    <div className="DocumentPageCertificate">
                                         <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src={`admin/img/${item.img}`} alt="" srcset="" />
                                     </div>
                                 ))}
@@ -42,10 +42,10 @@ function DocumentsPage({ children, ...props }) {
             </CenterBlock>
             <GetData tableName="docs">
                 {(data) =>
-                    <CenterBlock gap={"20px"}>
+                    <CenterBlock className="DocumentPageDocumentsCenterBlock">
                         {data.map((item) =>
                         (
-                            <WidthBlock flexDirection={"row"} height={"96px"} alignItems={"center"} justifyContent={"space-between"} padding={"40px"} backgroundColor={"#112E4F"} borderRadius={"10px"}>
+                            <WidthBlock className="DocumentPageDocuments" backgroundColor={"#112E4F"} borderRadius={"10px"}>
                                 <Text color={"#fff"}>{item.title + "." + getFileExtension(item.img)}</Text>
 
                                 <Button onClick={() => window.open(`/admin/img/${item.img}`)}>

@@ -33,6 +33,22 @@
 }
 
 .request_form {
-    padding: 40px 40px 40px 0;
+  padding: 40px 40px 40px 0;
   width: 50%;
+}
+
+@media (max-width: 768px) {
+  .request_block {
+    flex-direction: column;
+  }
+  .request {
+    width: 100%;
+  }
+  .request iframe {
+    width: 100%;
+  }
+  .request_form {
+    padding: 20px;
+    width: 100%;
+  }
 }

@@ -1,6 +1,12 @@
-.WidthBlock{
-    width: var(--blockWidth);
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+.WidthBlock {
+  width: var(--blockWidth);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+@media (max-width: 768px) {
+    .WidthBlock {
+        gap: 40px;
+    }
 }
