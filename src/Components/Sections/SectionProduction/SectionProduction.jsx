@@ -38,7 +38,7 @@ function SectionProduction({ productData }) {
     return (
         <>
             <CenterBlock>
-                <WidthBlock>
+                <WidthBlock className={classes.ProductionSectionWidthBlock}>
                     <FilterBlock updateFilteredObjects={updateFilteredObjects} />
                     <div className={classes.productions}>
                         {filteredObjects.map((item, index) => (

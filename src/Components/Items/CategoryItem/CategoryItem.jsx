@@ -3,7 +3,11 @@ import classes from './CategoryItem.module.css';
 import { Link } from "react-router-dom";
 
 function CategoryItem({ children, ...props }) {
-    const categoryPath = `/production?category=${encodeURIComponent(props.title)}`;
+    let categoryPath = `/production?category=${encodeURIComponent(props.title)}`;
+
+    if (props.title == "Вся продукция") {
+        categoryPath = `/production`;
+    }
     return (
         <>
             <Link to={categoryPath} className={classes.categoryItem}>

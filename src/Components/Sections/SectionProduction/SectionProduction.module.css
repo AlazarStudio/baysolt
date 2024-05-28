@@ -1,6 +1,12 @@
 .productions {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 45px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+
+@media (max-width: 768px) {
+  .ProductionSectionWidthBlock {
+    padding: 0 20px;
+  }
 }

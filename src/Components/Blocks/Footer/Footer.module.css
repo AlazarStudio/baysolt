@@ -52,6 +52,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  footer {
+    margin-top: 40px;
+  }
   .footerLinks {
     padding: 25px 10px;
     align-items: center;

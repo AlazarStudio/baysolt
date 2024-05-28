@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import SectionMain from "../Sections/SectionMain/SectionMain";
 import SectionCategory from "../Sections/SectionCategory/SectionCategory";
@@ -25,16 +25,28 @@ import GetData from "../GetData/GetData";
 function MainPage({ children, ...props }) {
   let img = "/background_main.png";
 
+  const location = useLocation();
+  const wherebuyRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state && location.state.targetId) {
+      const targetElement = document.getElementById(location.state.targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <>
-      <ColumnBlock width="100%" gap={"80px"} alignItems={"center"}>
+      <ColumnBlock className="MainPageColumnBlock">
         <SectionMain />
 
         {/* <GetData tableName="item" /> */}
 
         <SectionCategory />
 
-        <WidthBlock>
+        {/* <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
             Популярные товары
           </H2>
@@ -42,7 +54,6 @@ function MainPage({ children, ...props }) {
 
         <GetData tableName="item">
           {(data) => {
-            // Фильтруем элементы, у которых поле favorite содержит "Популярный" и не является null
             const favoriteItems = data
               .filter(item => item.favorite && item.favorite.includes("Популярный"))
               .slice(0, 3);
@@ -65,7 +76,7 @@ function MainPage({ children, ...props }) {
               </CenterBlock>
             );
           }}
-        </GetData>
+        </GetData> */}
 
         <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
@@ -73,19 +84,19 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        <WidthBlock>
-          <RowBlock className="MainPageBenefit" justifyContent={"space-between"} gap={"35px"}>
+        <WidthBlock className="MainPageBenefit">
+          <RowBlock justifyContent={"space-between"} gap={"35px"}>
             <Benefit />
           </RowBlock>
         </WidthBlock>
 
-        <WidthBlock>
+        <WidthBlock className="MainPageRequest">
           <Request />
         </WidthBlock>
 
         <Provider />
 
-        <WidthBlock>
+        <WidthBlock className="MainPageCertificate">
           <Sertificate />
           <Button link="/documents" >
             Подробнее
@@ -100,7 +111,7 @@ function MainPage({ children, ...props }) {
           </H2>
         </WidthBlock>
 
-        <WidthBlock id={"wherebuy"}>
+        <WidthBlock id={"wherebuy"} ref={wherebuyRef}>
 
           <GetData tableName="wherebuy">
             {(data) =>

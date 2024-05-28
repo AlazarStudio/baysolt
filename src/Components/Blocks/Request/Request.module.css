@@ -2,6 +2,7 @@
   display: flex;
   background-color: var(--color-perlblue);
   border-radius: 10px;
+  overflow: hidden;
   /* padding: 80px; */
   gap: 40px;
 }
@@ -40,6 +41,7 @@
 @media (max-width: 768px) {
   .request_block {
     flex-direction: column;
+    /* padding: 0 20px; */
   }
   .request {
     width: 100%;

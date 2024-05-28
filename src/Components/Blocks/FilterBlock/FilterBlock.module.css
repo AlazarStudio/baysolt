@@ -53,6 +53,7 @@
 @media (max-width: 768px) {
   .filter {
     flex-direction: column;
+    margin-top: 40px;
   }
   .filter select {
     width: 100%;

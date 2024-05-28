@@ -224,7 +224,35 @@ td {
   gap: 20px;
 }
 
+.MainPageColumnBlock {
+  width: 100%;
+  gap: 80px;
+  align-items: center;
+}
+
+.AboutPageCenterBlock {
+  gap: 80px;
+  margin: 40px 0;
+}
+
+.ContactPageCenterBlock {
+  gap: 80px;
+  margin: 40px 0;
+}
+
+.ProductPageCenterBlock {
+  gap: 40px;
+  margin: 60px 0 20px 0;
+}
+
 @media (max-width: 768px) {
+}
+
+@media (max-width: 1300px) {
+  :root {
+    --blockWidth: 1024px;
+    --width-block: 1024px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -235,12 +263,42 @@ td {
 
   h2 {
     padding: 0 20px;
+    text-align: center;
   }
 
   /*  */
+
+  .ProductPageCenterBlock {
+    margin: 40px 0;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
+  .ContactPageCenterBlock {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .MainPageRequest {
+    padding: 0 20px;
+  }
+
+  .MainPageCertificate {
+    align-items: center;
+  }
+
+  #wherebuy {
+    padding: 0 20px;
+  }
+
   .MainPageBenefit {
     padding: 0 20px;
   }
+
+  .MainPageColumnBlock {
+    gap: 40px;
+  }
+
   .DocumentPageCenterBlock {
     gap: 40px;
     padding: 0 20px;
@@ -281,36 +339,37 @@ td {
   }
 
   .AboutPageCenterBlock {
-    /* padding: 0 20px; */
+    padding: 0 20px;
     gap: 40px;
   }
 
   .AboutPageRowBlock {
     height: auto;
     padding: 20px;
+    gap: 20px;
   }
 
   .AboutPageWidthBlock {
-    padding: 0 20px;
+    padding: 0;
   }
 
   .AboutPageColumnBlock2 {
-    padding: 20px;
+    padding: 20px 0;
   }
 
   .AboutPageText1 {
     width: 100%;
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 
-  .AboutPageText3 {
+  .AboutPageText2 {
     font-size: 18px;
     line-height: 24px;
   }
 
   .AboutPageText3 {
     font-size: 14px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
   }
 
   .AboutPageImg2 {
@@ -342,6 +401,11 @@ td {
   }
 
   .ProductPageText {
+    font-size: 22px;
+  }
+
+  .ProductPageText2 {
+    text-align: center;
     font-size: 26px;
   }
 
@@ -368,6 +432,19 @@ td {
   }
 
   td {
+    display: flex !important;
     width: 100% !important;
+  }
+
+  td p {
+    display: inline-block !important;
+    width: 100% !important;
+  }
+  td p span {
+    /* display: inline-block !important; */
+    width: 100% !important;
+  }
+  td p span o:p {
+    display: none !important;
   }
 }

@@ -15,7 +15,7 @@ import geo_img from "/geo.png";
 function ContactPage({ children, ...props }) {
     return (
         <>
-            <CenterBlock gap={"80px"} margin={"40px 0"}>
+            <CenterBlock className="ContactPageCenterBlock">
                 <Text color={"#fff"} fontSize={"24px"} >Контакты</Text>
                 <WidthBlock className="ContactPageWidthBlock">
                     <ColumnBlock className="ContactPageColumnBlock">
@@ -25,7 +25,7 @@ function ContactPage({ children, ...props }) {
                                 <img src={`${geo_img}`} alt="" />
                             </div>
                             <Text color={"#fff"} fontSize={"24px"} >
-                                369301 Россия, Карачаево-Черкесская республика, г. Усть-Джегута, ул. Курортная, д.381 корпус А
+                                369301 Россия, <br /> Карачаево-Черкесская республика, <br /> г. Усть-Джегута, ул. Курортная, д.381 корпус А
                             </Text>
                         </RowBlock>
 

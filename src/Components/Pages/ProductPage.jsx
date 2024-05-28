@@ -41,7 +41,7 @@ function ProductPage({ children, ...props }) {
                         setItemName(data[1]);
 
                         return (
-                            <CenterBlock gap={"40px"} margin={"60px 0 20px 0"}>
+                            <CenterBlock className="ProductPageCenterBlock">
                                 <RowBlock className="ProductPageRowBlock">
                                     <ColumnBlock className="ProductPageColumnBlock" >
                                         <img src={`/admin/img/${data[4]}`} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
@@ -81,9 +81,9 @@ function ProductPage({ children, ...props }) {
 
             <GetData tableName="item">
                 {(data) => (
-                    <CenterBlock gap={"40px"} margin={"60px 0 40px 0"}>
+                    <CenterBlock className="ProductPageCenterBlock">
                         <WidthBlock gap={"40px"}>
-                            <Text color={"#fff"} fontSize={"32px"} fontWeight={"600"}>Похожие товары</Text>
+                            <Text className="ProductPageText2" color={"#fff"} fontSize={"32px"} fontWeight={"600"}>Похожие товары</Text>
                             <div style={{ display: "flex", justifyContent: "flex-start", flexWrap: "wrap", gap: "45px" }}>
                                 {data
                                     .filter(item => item.category === productCategory)

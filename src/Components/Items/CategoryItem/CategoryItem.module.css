@@ -85,6 +85,7 @@
   transition: all 0.5s ease-in-out;
   z-index: -1;
   border-radius: 20px;
+  padding: 10px;
 }
 
 .categoryItem:hover .categoryItemBack {
@@ -107,8 +108,9 @@
 
 @media (max-width: 768px) {
   .categoryItem{
-    width: 130px;
-    height: 130px;
+    width: 45%;
+    height: 150px;
+    max-width: 165px;
   }
   .categoryItemImg {
     width: 50px;
