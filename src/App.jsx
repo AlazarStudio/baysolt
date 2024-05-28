@@ -11,10 +11,12 @@ import FeedbackPage from "./Components/Pages/FeedbackPage";
 import NonFoundPage from "./Components/Pages/NonFoundPage";
 
 import Layout from "./Components/Standart/Layout/Layout";
+import ScrollToTop from "./Components/Standart/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <>
+     <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />

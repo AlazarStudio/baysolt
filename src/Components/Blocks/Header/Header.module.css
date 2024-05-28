@@ -103,6 +103,12 @@ header {
 
 
 @media (max-width: 768px) {
+
+  header {
+    position: sticky;
+    top: 0;
+  }
+
   .headerSection {
     display: none;
   }

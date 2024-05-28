@@ -29,8 +29,9 @@ function MainPage({ children, ...props }) {
   const wherebuyRef = useRef(null);
 
   useEffect(() => {
-    if (location.state && location.state.targetId) {
-      const targetElement = document.getElementById(location.state.targetId);
+    if (location.hash) {
+      const targetId = location.hash.substring(1); // Удаляем #
+      const targetElement = document.getElementById(targetId);
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "smooth" });
       }

@@ -68,22 +68,30 @@
   .provider {
     padding: 20px;
   }
+
   .provider_block {
     flex-direction: column-reverse;
   }
+
   .provider_block__left {
     width: 100%;
   }
-  
+
   .provider_block__right {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .provider_block__left___points {
     gap: 20px;
   }
+
+  .provider_block__left___points____point {
+    width: 100%;
+  }
+
   .provider_block__left___title {
     font-size: 20px;
     line-height: 30px;

@@ -411,6 +411,8 @@ td {
 
   .productText {
     font-size: 14px !important;
+    text-align: justify;
+    text-indent: 20px;
   }
 
   table {

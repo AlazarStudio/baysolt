@@ -110,7 +110,7 @@
   .categoryItem{
     width: 45%;
     height: 150px;
-    max-width: 165px;
+    /* max-width: 165px; */
   }
   .categoryItemImg {
     width: 50px;

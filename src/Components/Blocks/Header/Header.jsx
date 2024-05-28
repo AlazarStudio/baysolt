@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import classes from "./Header.module.css";
 import baysolt_img from "/baysolt.png";
 import GetData from "../../GetData/GetData";
@@ -13,7 +13,6 @@ function Header({ children, ...props }) {
   const [isProductionOpen, setIsProductionOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate(); // Используем navigate для перенаправления
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -50,11 +49,6 @@ function Header({ children, ...props }) {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-
-  const handleAnchorClick = (e, targetId) => {
-    e.preventDefault();
-    navigate("/", { state: { targetId } }); // Навигация с передачей состояния
   };
 
   const isActiveLink = (path) => {
@@ -110,7 +104,7 @@ function Header({ children, ...props }) {
               <div className={classes.dropdownContent}>
                 <Link to="/about" onClick={() => setIsCompanyOpen(false)}>О нас</Link>
                 <Link to="/documents" onClick={() => setIsCompanyOpen(false)}>Документы</Link>
-                <a href="/#wherebuy" onClick={(e) => handleAnchorClick(e, "wherebuy")}>Где купить</a>
+                <Link to="/#wherebuy" onClick={() => setIsCompanyOpen(false)}>Где купить</Link>
               </div>
             )}
           </div>
@@ -141,12 +135,12 @@ function Header({ children, ...props }) {
           <div className={`${classes.headerBlockMobile} ${isMobileMenuOpen ? classes.show : ''}`}>
             <Link className={classes.headerLink} to="/">Главная</Link>
             <Link className={classes.headerLink} to="/production">Вся продукция</Link>
-            <a className={classes.headerLink} href="/#wherebuy" onClick={(e) => handleAnchorClick(e, "wherebuy")}>Где купить</a>
+            <Link className={classes.headerLink} to="/#wherebuy">Где купить</Link>
             <Link className={classes.headerLink} to="/about">О нас</Link>
             <Link className={classes.headerLink} to="/documents">Документы</Link>
             <Link className={classes.headerLink} to="/contact">Контакты</Link>
             <Link className={classes.headerLink} to="/feedback">Обратная связь</Link>
-            <Link className={classes.headerLink} to="tel:+79283973000">8 (928) 397-30-00</Link>
+            {/* <Link className={classes.headerLink} to="tel:+79283973000">8 (928) 397-30-00</Link> */}
           </div>
         </section>
       </header>
