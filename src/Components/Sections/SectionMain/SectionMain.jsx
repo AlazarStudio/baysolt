@@ -1,7 +1,7 @@
 import React from "react";
 import classes from './SectionMain.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css';
@@ -20,8 +20,12 @@ function SectionMain({ children, ...props }) {
                             <Swiper
                                 navigation={true}
                                 pagination={{ clickable: true }}
-                                modules={[Navigation, Pagination]}
+                                modules={[Autoplay, Navigation, Pagination]}
                                 loop={true}
+                                autoplay={{
+                                    delay: 5000,
+                                    disableOnInteraction: false,
+                                  }}
                                 className={classes.mySwiper}
                             >
                                 {data.map((item, index) => (
