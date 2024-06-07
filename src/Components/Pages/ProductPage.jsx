@@ -39,7 +39,7 @@ function ProductPage({ children, ...props }) {
                     if (data) {
                         setProductCategory(data[3]);
                         setItemName(data[1]);
-
+                        console.log(data);
                         return (
                             <CenterBlock className="ProductPageCenterBlock">
                                 <RowBlock className="ProductPageRowBlock">
@@ -57,8 +57,8 @@ function ProductPage({ children, ...props }) {
                                         <Text className="ProductPageText">{data[1]}</Text>
 
                                         <Text color={"#fff"} fontSize={"16px"} fontWeight={"500"}>
-                                            Срок хранения {data[5]} месяцев с даты изготовления. <br /> <br />
-                                            Фасовка {data[6]}кг. <br /> <br />
+                                            {data[5] && `Срок хранения ${data[5]} месяцев с даты изготовления.`} <br /> <br />
+                                            {data[6] && `Фасовка ${data[6]} кг.`} <br /> <br />
                                             {data[7]}
                                         </Text>
 
@@ -103,7 +103,7 @@ function ProductPage({ children, ...props }) {
             </GetData>
 
             <Modal show={showModal} handleClose={handleModalClose}>
-                <h2 style={{color:"#fff", padding:"20px 0 0 35px"}}>Форма заявки</h2>
+                <h2 style={{ color: "#fff", padding: "20px 0 0 35px" }}>Форма заявки</h2>
                 <ContactFormRequest itemName={itemName} />
             </Modal>
         </>

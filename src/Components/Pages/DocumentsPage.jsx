@@ -29,7 +29,7 @@ function DocumentsPage({ children, ...props }) {
                     <GetData tableName="certificate">
                         {(data) =>
                             <div className="DocumentPageCertificateBlock">
-                                {data.slice(0, 3).map((item) =>
+                                {data.map((item) =>
                                 (
                                     <div className="DocumentPageCertificate">
                                         <img style={{ width: "100%", height: "100%", objectFit: "cover" }} src={`admin/img/${item.img}`} alt="" srcset="" />

@@ -11,7 +11,7 @@ function SectionCategory({ children, ...props }) {
                     <CategoryItem img='CategoryItem6.png' title="Вся продукция"></CategoryItem>
                     <CategoryItem img='CategoryItem1.png' title="Штукатурки"></CategoryItem>
                     <CategoryItem img='CategoryItem2.png' title="Шпаклевки"></CategoryItem>
-                    <CategoryItem img='CategoryItem3.png' title="Плиточный клей "></CategoryItem>
+                    <CategoryItem img='CategoryItem3.png' title="Плиточный клей"></CategoryItem>
                     <CategoryItem img='CategoryItem4.png' title="Монтажные смеси"></CategoryItem>
                     <CategoryItem img='CategoryItem5.png' title="Наливные полы"></CategoryItem>
                     <CategoryItem img='CategoryItem7.png' title="Пазогребные плиты"></CategoryItem>
