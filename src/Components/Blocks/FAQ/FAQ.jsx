@@ -6,23 +6,26 @@ import RowBlock from "../../Standart/RowBlock/RowBlock";
 import H2 from "../../Standart/H2/H2";
 import Accordion from "../Accordion/Accordion";
 import Text from "../../Standart/Text/Text";
+import Button from "../../Standart/Button/Button";
 
 import GetData from "../../GetData/GetData";
 
 function FAQ({ children, ...props }) {
   return (
     <>
-      <div className={classes.faq}>
-        <CenterBlock>
-          <WidthBlock>
-            <H2 font-size={"32px"} color={"#fff"}>
-              Часто задаваемые вопросы
-            </H2>
+      <GetData tableName="faq">
+        {(data) => (data.length != 0) ? (<>
+          <div className={classes.faq}>
+            <CenterBlock>
+              <WidthBlock>
+                <H2 font-size={"32px"} color={"#fff"}>
+                  Часто задаваемые вопросы
+                </H2>
 
-            <RowBlock alignItems={"flex-start"} gap={"20px"}>
+                <RowBlock alignItems={"flex-start"} gap={"20px"}>
 
-              <GetData tableName="faq">
-                {(data) =>
+                  {/* <GetData tableName="faq">
+                {(data) => */}
                   <div className={classes.accordion_data}>
                     {data.map((item) =>
                     (
@@ -39,23 +42,29 @@ function FAQ({ children, ...props }) {
                       </Accordion>
                     ))}
                   </div>
-                }
-              </GetData>
+                  {/* }
+              </GetData> */}
 
-              <div className={classes.accordion_feed}>
-                <Text fontSize={"30px"} color={"#fff"} fontWeight={"600"}>
-                  Не нашли нужный ответ?
-                </Text>
-                <Text fontSize={"20px"} color={"#fff"} fontWeight={"500"}>
-                  Свяжитесь с нами!
-                </Text>
-              </div>
+                  <div className={classes.accordion_feed}>
+                    <Text fontSize={"30px"} color={"#fff"} fontWeight={"600"}>
+                      Не нашли нужный ответ?
+                    </Text>
+                    <Text fontSize={"20px"} color={"#fff"} fontWeight={"500"}>
+                      Свяжитесь с нами!
+                    </Text>
+                    <Button to="/feedback">
+                      Обратная связь
+                    </Button>
+                  </div>
 
-            </RowBlock>
+                </RowBlock>
 
-          </WidthBlock>
-        </CenterBlock>
-      </div >
+              </WidthBlock>
+            </CenterBlock>
+          </div >
+          </>)  :  (<></>)
+        }
+      </GetData>
     </>
   );
 }

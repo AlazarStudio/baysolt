@@ -104,10 +104,11 @@ function Header({ children, ...props }) {
               <div className={classes.dropdownContent}>
                 <Link to="/about" onClick={() => setIsCompanyOpen(false)}>О нас</Link>
                 <Link to="/documents" onClick={() => setIsCompanyOpen(false)}>Документы</Link>
-                <Link to="/#wherebuy" onClick={() => setIsCompanyOpen(false)}>Где купить</Link>
+                {/* <Link to="/#wherebuy" onClick={() => setIsCompanyOpen(false)}>Где купить</Link> */}
               </div>
             )}
           </div>
+          <Link className={classes.headerLink} to="/#wherebuy">Где купить</Link>
 
           <Link className={`${classes.headerLink} ${isActiveLink("/contact")}`} to="/contact">
             Контакты
