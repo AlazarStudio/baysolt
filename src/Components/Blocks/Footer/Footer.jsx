@@ -29,8 +29,8 @@ function Footer({ children, ...props }) {
                             <Text padding="0 0 10px 0" fontSize="20px" >Продукция</Text>
                             <Link className={classes.footerLink} to="/production?category=Наливные полы">Наливные полы</Link>
                             {/* <Link className={classes.footerLink} to="/production?category=Ремонтные смеси">Ремонтные смеси</Link> */}
-                            <Link className={classes.footerLink} to="/production?category=Пазогребные плиты">Пазогребные плиты</Link>
-                            <Link className={classes.footerLink} to="/production?category=Гибсовые блоки">Гибсовые блоки</Link>
+                            {/* <Link className={classes.footerLink} to="/production?category=Пазогребные плиты">Пазогребные плиты</Link> */}
+                            {/* <Link className={classes.footerLink} to="/production?category=Гибсовые блоки">Гибсовые блоки</Link> */}
                         </div>
                         <div className={classes.footerNav}>
                             <Text padding="0 0 10px 0" fontSize="20px" >Компания</Text>

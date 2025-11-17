@@ -14,8 +14,8 @@ function SectionCategory({ children, ...props }) {
                     <CategoryItem img='CategoryItem3.png' title="Плиточный клей"></CategoryItem>
                     <CategoryItem img='CategoryItem4.png' title="Монтажные смеси"></CategoryItem>
                     <CategoryItem img='CategoryItem5.png' title="Наливные полы"></CategoryItem>
-                    <CategoryItem img='CategoryItem7.png' title="Пазогребные плиты"></CategoryItem>
-                    <CategoryItem img='CategoryItem8.png' title="Гибсовые блоки"></CategoryItem>
+                    {/* <CategoryItem img='CategoryItem7.png' title="Пазогребные плиты"></CategoryItem> */}
+                    {/* <CategoryItem img='CategoryItem8.png' title="Гибсовые блоки"></CategoryItem> */}
                 </div>
             </section>
         </>
