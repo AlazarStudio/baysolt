@@ -5,8 +5,8 @@
   justify-content: center;
   cursor: pointer;
   gap: 25px;
-  height: 275px;
-  width: 23%;
+  height: 200px;
+  width: 15%;
   border-radius: 10px;
   /* background-color: var(--color-perlblue); */
   /* transition: background-color 0.4s ease-in-out; */
@@ -84,7 +84,7 @@
   background-color: var(--color-perlblue);
   transition: all 0.5s ease-in-out;
   z-index: -1;
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
 }
 
