@@ -104,7 +104,7 @@ function MainPage({ children, ...props }) {
           </Button>
         </WidthBlock> */}
 
-        <FAQ />
+        {/* <FAQ /> */}
 
         {/* <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
