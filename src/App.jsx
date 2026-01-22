@@ -12,6 +12,7 @@ import NonFoundPage from "./Components/Pages/NonFoundPage";
 
 import Layout from "./Components/Standart/Layout/Layout";
 import ScrollToTop from "./Components/Standart/ScrollToTop/ScrollToTop";
+import BuyPage from "./Components/Pages/BuyPage";
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
+          <Route path="/index.html" element={<MainPage />} />
           <Route path="/production" element={<ProductionPage />} />
           <Route path="/production/:id" element={<ProductPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/documents" element={<DocumentsPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/buy" element={<BuyPage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
           
           <Route path="*" element={<NonFoundPage />} />

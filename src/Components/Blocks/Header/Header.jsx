@@ -108,7 +108,7 @@ function Header({ children, ...props }) {
               </div>
             )}
           </div>
-          <Link className={classes.headerLink} to="/#wherebuy">Где купить</Link>
+          <Link className={`${classes.headerLink} ${isActiveLink("/buy")}`} to="/buy">Где купить</Link>
 
           <Link className={`${classes.headerLink} ${isActiveLink("/contact")}`} to="/contact">
             Контакты

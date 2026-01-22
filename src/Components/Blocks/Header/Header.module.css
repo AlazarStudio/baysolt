@@ -6,7 +6,7 @@ header {
   height: 80px;
   color: #fff;
   width: 100%;
-  box-shadow: 0 -8px 20px 2px #3e85af;
+  box-shadow: 0 -8px 20px 2px #2d607ea4;
 }
 
 .headerLink {
@@ -14,11 +14,13 @@ header {
   align-items: center;
   color: #fff;
   padding: 10px;
-  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
 }
 
-.headerLink.active {
-  border-top: 2px solid #fff;
+.headerLink.active,
+.headerLink:hover {
+  border-bottom: 2px solid #fff;
 }
 
 .headerSection {
@@ -48,6 +50,13 @@ header {
   padding: 10px 35px;
   border: 1px solid #fff;
   border-radius: 30px;
+}
+
+.linkTel:hover{
+  background-color: #fff;
+  color:#0a1f3a;
+  border-bottom: none;
+  border: 1px solid #fff;
 }
 
 .dropdown {

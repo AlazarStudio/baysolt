@@ -51,10 +51,7 @@ const modalStyles = {
   },
   modal: {
     position: 'relative',
-    width: '80%',
-    maxWidth: '800px',
-    maxHeight: '80%',
-    overflow: 'auto',
+    height: '80%',
   },
   closeButton: {
     position: 'absolute',
@@ -66,7 +63,8 @@ const modalStyles = {
   },
   image: {
     width: '100%',
-    height: 'auto',
+    height: '100%',
+    objectFit: 'contain'
   }
 };
 

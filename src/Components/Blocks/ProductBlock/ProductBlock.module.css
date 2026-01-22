@@ -5,11 +5,23 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.infoText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
 }
 
 .productions_item__img {
     width: 100%;
     height: 366px;
+    
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .productions_item__img img {

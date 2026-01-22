@@ -9,10 +9,12 @@ function ProductBlock({ children, ...props }) {
                 <div className={classes.productions_item__img}>
                     <img src={`/admin/img/${props.img}`} alt="" />
                 </div>
-                <div className={classes.productions_item__title}>{props.title}</div>
-                <a href={`/production/${props.linkTitle}`} className={classes.productions_item__btn}>
-                    Подробнее
-                </a>
+                <div className={classes.infoText}>
+                    <div className={classes.productions_item__title}>{props.title}</div>
+                    <a href={`/production/${props.linkTitle}`} className={classes.productions_item__btn}>
+                        Подробнее
+                    </a>
+                </div>
             </div>
         </>
     );

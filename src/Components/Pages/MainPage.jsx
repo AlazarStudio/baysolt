@@ -97,16 +97,16 @@ function MainPage({ children, ...props }) {
 
         <Provider />
 
-        <WidthBlock className="MainPageCertificate">
+        {/* <WidthBlock className="MainPageCertificate">
           <Sertificate />
           <Button link="/documents" >
             Подробнее
           </Button>
-        </WidthBlock>
+        </WidthBlock> */}
 
         <FAQ />
 
-        <WidthBlock>
+        {/* <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
             Где купить
           </H2>
@@ -125,7 +125,7 @@ function MainPage({ children, ...props }) {
             }
           </GetData>
 
-        </WidthBlock>
+        </WidthBlock> */}
 
         <WidthBlock>
           <H2 font-size={"32px"} color={"#fff"}>
